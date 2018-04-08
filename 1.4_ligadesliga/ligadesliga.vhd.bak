@@ -1,0 +1,13 @@
+entity ligadesliga is
+	port( botao: in bit;
+			Standby : out bit;
+			off : bit;
+			rst : bit);
+end;
+
+architecture logica of ligadesliga is
+begin
+
+-- architecture
+
+end logica;
