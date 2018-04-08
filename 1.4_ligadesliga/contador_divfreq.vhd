@@ -38,9 +38,9 @@ ARCHITECTURE bdf_type OF contador_divfreq IS
 type unsigned is array(natural range <>) of std_logic;
 
 -- módulo do contador
-VARIABLE modulo : integer := 0;
+SHARED VARIABLE modulo : integer := 0;
 -- variavel auxiliar para realizar a contagem
-VARIABLE c : integer := 0;
+SHARED VARIABLE c : integer := 0;
 
 COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
