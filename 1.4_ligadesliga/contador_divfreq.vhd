@@ -35,9 +35,9 @@ END contador_divfreq;
 ARCHITECTURE bdf_type OF contador_divfreq IS 
 
 -- módulo do contador
-VARIABLE modulo : bit_vector(8 downto 0) := "101000101";
+VARIABLE modulo : STD_LOGIC_VECTOR(8 downto 0) := "101000101";
 -- variavel auxiliar para realizar a contagem
-VARIABLE c : bit_vector(8 dowNTO 0) := "000000000";
+VARIABLE c : STD_LOGIC_VECTOR(8 dowNTO 0) := "000000000";
 
 COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
