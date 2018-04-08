@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
--- CREATED		"Sun Apr 08 10:59:16 2018"
+-- CREATED		"Sun Apr 08 10:38:59 2018"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -27,8 +27,7 @@ ENTITY contador_divfreq IS
 		clock_fpga :  IN  STD_LOGIC;
 		cin :  IN  STD_LOGIC;
 		cout :  OUT  STD_LOGIC;
-		clock_153Khz :  OUT  STD_LOGIC;
-		q :  OUT  STD_LOGIC_VECTOR(8 DOWNTO 0)
+		q :  OUT  STD_LOGIC_VECTOR(8 TO 8)
 	);
 END contador_divfreq;
 
@@ -42,47 +41,16 @@ COMPONENT lpm_counter0
 	);
 END COMPONENT;
 
-SIGNAL	q_ALTERA_SYNTHESIZED :  STD_LOGIC_VECTOR(8 TO 8);
 
--- módulo do contador
-VARIABLE mod : bit_vector(8 downto 0) := "101000101";
--- variavel auxiliar para realizar a contagem
-VARIABLE c : bit_vector(8 dowNTO 0) := "000000000";
 
 BEGIN 
 
-	-- processo para realizar o controle da alternancia dos estado
-	process(clock) begin
-		-- subida do clock
-		if rising_edge(clock) then
-			-- realiza a contagem quando cin = 1
-			if cin = '1' 
-				-- se ainda não chegou no final, conta
-				if c < mod then
-					c := c + 1;
-				else
-				-- se for igual ao modulo, retorna ao inicio
-					c := 0;
-				end if;
-				-- cout é 1 quando contador estiver no final da contagem
-				if c = mod then
-					cout <= '1';
-				else
-					cout <= '0';
-				end if;
-			end if;
-			-- envia o valor de c para q
-			q <= c;
-		end if;
-	end process;
-	
+
 
 b2v_inst : lpm_counter0
 PORT MAP(clock => clock_fpga,
 		 cin => cin,
-		 cout => cout,
-		 q => q);
+		 cout => cout);
 
-clock_153Khz <= q_ALTERA_SYNTHESIZED(8);
 
 END bdf_type;

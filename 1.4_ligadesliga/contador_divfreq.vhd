@@ -35,13 +35,6 @@ END contador_divfreq;
 
 ARCHITECTURE bdf_type OF contador_divfreq IS 
 
-type unsigned is array(natural range <>) of std_logic;
-
--- módulo do contador
-SHARED VARIABLE modulo : integer := 0;
--- variavel auxiliar para realizar a contagem
-SHARED VARIABLE c : integer := 0;
-
 COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
 		 cin : IN STD_LOGIC;
@@ -51,6 +44,11 @@ COMPONENT lpm_counter0
 END COMPONENT;
 
 SIGNAL	q_ALTERA_SYNTHESIZED :  STD_LOGIC_VECTOR(8 TO 8);
+
+-- módulo do contador
+SHARED VARIABLE modulo : integer := 0;
+-- variavel auxiliar para realizar a contagem
+SHARED VARIABLE c : integer := 0;
 
 BEGIN 
 
