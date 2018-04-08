@@ -1,5 +1,5 @@
 Analysis & Synthesis report for contador_divfreq
-Sun Apr 08 12:35:23 2018
+Sun Apr 08 12:43:18 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Apr 08 12:35:23 2018          ;
+; Analysis & Synthesis Status        ; Failed - Sun Apr 08 12:43:18 2018          ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; contador_divfreq                           ;
 ; Top-level Entity Name              ; contador_divfreq                           ;
@@ -160,16 +160,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Apr 08 12:35:21 2018
+    Info: Processing started: Sun Apr 08 12:43:16 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador_divfreq -c contador_divfreq
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file contador_divfreq.vhd
     Info (12022): Found design unit 1: contador_divfreq-bdf_type
     Info (12023): Found entity 1: contador_divfreq
-Error (10327): VHDL error at contador_divfreq.vhd(62): can't determine definition of operator ""+"" -- found 0 possible definitions File: D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/contador_divfreq.vhd Line: 62
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+Info (12127): Elaborating entity "contador_divfreq" for the top level hierarchy
+Error (10531): VHDL Variable Declaration error at contador_divfreq.vhd(41): variable declared outside subprogram or process must be a shared variable File: D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/contador_divfreq.vhd Line: 41
+Warning (10542): VHDL Variable Declaration warning at contador_divfreq.vhd(41): used initial value expression for variable "modulo" because variable was never assigned a value
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
     Error: Peak virtual memory: 561 megabytes
-    Error: Processing ended: Sun Apr 08 12:35:23 2018
+    Error: Processing ended: Sun Apr 08 12:43:18 2018
     Error: Elapsed time: 00:00:02
     Error: Total CPU time (on all processors): 00:00:02
 

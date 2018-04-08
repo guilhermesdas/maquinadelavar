@@ -18,6 +18,7 @@
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
+use ieee.numeric_std.all;
 
 LIBRARY work;
 
@@ -34,10 +35,12 @@ END contador_divfreq;
 
 ARCHITECTURE bdf_type OF contador_divfreq IS 
 
+type unsigned is array(natural range <>) of std_logic;
+
 -- módulo do contador
-VARIABLE modulo : STD_LOGIC_VECTOR(8 downto 0) := "101000101";
+VARIABLE modulo : integer := 0;
 -- variavel auxiliar para realizar a contagem
-VARIABLE c : STD_LOGIC_VECTOR(8 dowNTO 0) := "000000000";
+VARIABLE c : integer := 0;
 
 COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
@@ -62,7 +65,7 @@ BEGIN
 					c := c + 1;
 				else
 				-- se for igual ao modulo, retorna ao inicio
-					c := "000000000";
+					c := 0;
 				end if;
 				-- cout é 1 quando contador estiver no final da contagem
 				if c = modulo then
@@ -72,7 +75,7 @@ BEGIN
 				end if;
 			end if;
 			-- envia o valor de c para q
-			q <= to_stdlogicvector(c);
+			q <= std_logic_vector(to_unsigned(c, q'length));
 		end if;
 	end process;
 	
