@@ -34,6 +34,11 @@ END contador_divfreq;
 
 ARCHITECTURE bdf_type OF contador_divfreq IS 
 
+-- módulo do contador
+VARIABLE modulo : bit_vector(8 downto 0) := "101000101";
+-- variavel auxiliar para realizar a contagem
+VARIABLE c : bit_vector(8 dowNTO 0) := "000000000";
+
 COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
 		 cin : IN STD_LOGIC;
@@ -44,15 +49,10 @@ END COMPONENT;
 
 SIGNAL	q_ALTERA_SYNTHESIZED :  STD_LOGIC_VECTOR(8 TO 8);
 
--- módulo do contador
-VARIABLE modulo : bit_vector(8 downto 0) := "101000101";
--- variavel auxiliar para realizar a contagem
-VARIABLE c : bit_vector(8 dowNTO 0) := "000000000";
-
 BEGIN 
 
 	-- processo para realizar o controle da alternancia dos estado
-	process(clock) begin
+	process(clock_fpga) begin
 		-- subida do clock
 		if rising_edge(clock_fpga) then
 			-- realiza a contagem quando cin = 1
@@ -62,7 +62,7 @@ BEGIN
 					c := c + 1;
 				else
 				-- se for igual ao modulo, retorna ao inicio
-					c := 0;
+					c := "000000000";
 				end if;
 				-- cout é 1 quando contador estiver no final da contagem
 				if c = modulo then
@@ -72,7 +72,7 @@ BEGIN
 				end if;
 			end if;
 			-- envia o valor de c para q
-			q <= c;
+			q <= to_stdlogicvector(c);
 		end if;
 	end process;
 	
