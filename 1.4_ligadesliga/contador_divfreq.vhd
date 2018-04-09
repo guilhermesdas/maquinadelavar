@@ -13,12 +13,11 @@
 -- applicable agreement for further details.
 
 -- PROGRAM		"Quartus II 64-Bit"
--- VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
--- CREATED		"Sun Apr 08 10:59:16 2018"
+-- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+-- CREATED		"Mon Apr 09 18:22:11 2018"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
-use ieee.numeric_std.all;
 
 LIBRARY work;
 
@@ -28,8 +27,7 @@ ENTITY contador_divfreq IS
 		clock_fpga :  IN  STD_LOGIC;
 		cin :  IN  STD_LOGIC;
 		cout :  OUT  STD_LOGIC;
-		clock_153Khz :  OUT  STD_LOGIC;
-		q :  OUT  STD_LOGIC_VECTOR(8 DOWNTO 0)
+		q :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0)
 	);
 END contador_divfreq;
 
@@ -39,44 +37,15 @@ COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
 		 cin : IN STD_LOGIC;
 		 cout : OUT STD_LOGIC;
-		 q : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+		 q : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
 	);
 END COMPONENT;
 
-SIGNAL	q_ALTERA_SYNTHESIZED :  STD_LOGIC_VECTOR(8 TO 8);
 
--- módulo do contador
-SHARED VARIABLE modulo : integer := 0;
--- variavel auxiliar para realizar a contagem
-SHARED VARIABLE c : integer := 0;
 
 BEGIN 
 
-	-- processo para realizar o controle da alternancia dos estado
-	process(clock_fpga) begin
-		-- subida do clock
-		if rising_edge(clock_fpga) then
-			-- realiza a contagem quando cin = 1
-			if cin = '1' then
-				-- se ainda não chegou no final, conta
-				if c < modulo then
-					c := c + 1;
-				else
-				-- se for igual ao modulo, retorna ao inicio
-					c := 0;
-				end if;
-				-- cout é 1 quando contador estiver no final da contagem
-				if c = modulo then
-					cout <= '1';
-				else
-					cout <= '0';
-				end if;
-			end if;
-			-- envia o valor de c para q
-			q <= std_logic_vector(to_unsigned(c, q'length));
-		end if;
-	end process;
-	
+
 
 b2v_inst : lpm_counter0
 PORT MAP(clock => clock_fpga,
@@ -84,6 +53,5 @@ PORT MAP(clock => clock_fpga,
 		 cout => cout,
 		 q => q);
 
-clock_153Khz <= q_ALTERA_SYNTHESIZED(8);
 
 END bdf_type;

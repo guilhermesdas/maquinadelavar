@@ -19,6 +19,6 @@ component lpm_counter0
 		cin		: IN STD_LOGIC ;
 		clock		: IN STD_LOGIC ;
 		cout		: OUT STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (8 DOWNTO 0)
+		q		: OUT STD_LOGIC_VECTOR (2 DOWNTO 0)
 	);
 end component;

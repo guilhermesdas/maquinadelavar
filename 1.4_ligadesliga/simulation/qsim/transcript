@@ -1,31 +1,31 @@
-# do ligadesliga.do 
+# do contador_divfreq.do 
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module ligadesliga
+# -- Compiling module contador_divfreq
 # 
 # Top level modules:
-# 	ligadesliga
+# 	contador_divfreq
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module ligadesliga_vlg_sample_tst
-# -- Compiling module ligadesliga_vlg_check_tst
-# -- Compiling module ligadesliga_vlg_vec_tst
+# -- Compiling module contador_divfreq_vlg_sample_tst
+# -- Compiling module contador_divfreq_vlg_check_tst
+# -- Compiling module contador_divfreq_vlg_vec_tst
 # 
 # Top level modules:
-# 	ligadesliga_vlg_vec_tst
-# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.ligadesliga_vlg_vec_tst 
-# Loading work.ligadesliga_vlg_vec_tst
-# Loading work.ligadesliga
-# Loading cycloneiv_ver.cycloneiv_io_obuf
+# 	contador_divfreq_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.contador_divfreq_vlg_vec_tst 
+# Loading work.contador_divfreq_vlg_vec_tst
+# Loading work.contador_divfreq
 # Loading cycloneiv_ver.cycloneiv_io_ibuf
 # Loading cycloneiv_ver.cycloneiv_clkctrl
 # Loading cycloneiv_ver.cycloneiv_mux41
 # Loading cycloneiv_ver.cycloneiv_ena_reg
+# Loading cycloneiv_ver.cycloneiv_io_obuf
 # Loading cycloneiv_ver.cycloneiv_lcell_comb
 # Loading altera_ver.dffeas
-# Loading work.ligadesliga_vlg_sample_tst
-# Loading work.ligadesliga_vlg_check_tst
+# Loading work.contador_divfreq_vlg_sample_tst
+# Loading work.contador_divfreq_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : ligadesliga.vwf.vt(204)
-#    Time: 1 us  Iteration: 0  Instance: /ligadesliga_vlg_vec_tst/tb_out
+# ** Note: $finish    : contador_divfreq.vt(212)
+#    Time: 1 us  Iteration: 0  Instance: /contador_divfreq_vlg_vec_tst/tb_out
