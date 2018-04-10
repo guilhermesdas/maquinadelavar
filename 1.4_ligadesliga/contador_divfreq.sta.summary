@@ -3,11 +3,11 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock_fpga'
-Slack : -0.079
-TNS   : -0.150
+Slack : -0.082
+TNS   : -0.162
 
 Type  : Slow 1200mV 85C Model Hold 'clock_fpga'
-Slack : 0.355
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_fpga'
@@ -15,7 +15,7 @@ Slack : -3.000
 TNS   : -6.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock_fpga'
-Slack : 0.039
+Slack : 0.035
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock_fpga'
@@ -27,11 +27,11 @@ Slack : -3.000
 TNS   : -6.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock_fpga'
-Slack : 0.391
+Slack : 0.389
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_fpga'
-Slack : 0.185
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_fpga'

@@ -1,4 +1,18 @@
 |contador_temp
+cout <= lpm_counter0:inst.cout
+rst => lpm_counter0:inst.sclr
+wrTE => lpm_counter0:inst.sload
+clock_1hz => lpm_counter0:inst.clock
+enTE => lpm_counter0:inst.cnt_en
+cin => lpm_counter0:inst.cin
+dtRl0[0] => lpm_counter0:inst.data[0]
+dtRl0[1] => lpm_counter0:inst.data[1]
+dtRl0[2] => lpm_counter0:inst.data[2]
+dtRl0[3] => lpm_counter0:inst.data[3]
+q[0] <= lpm_counter0:inst.q[0]
+q[1] <= lpm_counter0:inst.q[1]
+q[2] <= lpm_counter0:inst.q[2]
+q[3] <= lpm_counter0:inst.q[3]
 
 
 |contador_temp|lpm_counter0:inst
@@ -19,28 +33,28 @@ q[3] <= lpm_counter:LPM_COUNTER_component.q[3]
 
 
 |contador_temp|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component
-clock => cntr_05m:auto_generated.clock
+clock => cntr_jbm:auto_generated.clock
 clk_en => ~NO_FANOUT~
-cnt_en => cntr_05m:auto_generated.cnt_en
+cnt_en => cntr_jbm:auto_generated.cnt_en
 updown => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 aset => ~NO_FANOUT~
 aconst => ~NO_FANOUT~
 aload => ~NO_FANOUT~
-sclr => cntr_05m:auto_generated.sclr
+sclr => cntr_jbm:auto_generated.sclr
 sset => ~NO_FANOUT~
 sconst => ~NO_FANOUT~
-sload => cntr_05m:auto_generated.sload
-data[0] => cntr_05m:auto_generated.data[0]
-data[1] => cntr_05m:auto_generated.data[1]
-data[2] => cntr_05m:auto_generated.data[2]
-data[3] => cntr_05m:auto_generated.data[3]
-cin => cntr_05m:auto_generated.cin
-q[0] <= cntr_05m:auto_generated.q[0]
-q[1] <= cntr_05m:auto_generated.q[1]
-q[2] <= cntr_05m:auto_generated.q[2]
-q[3] <= cntr_05m:auto_generated.q[3]
-cout <= cntr_05m:auto_generated.cout
+sload => cntr_jbm:auto_generated.sload
+data[0] => cntr_jbm:auto_generated.data[0]
+data[1] => cntr_jbm:auto_generated.data[1]
+data[2] => cntr_jbm:auto_generated.data[2]
+data[3] => cntr_jbm:auto_generated.data[3]
+cin => cntr_jbm:auto_generated.cin
+q[0] <= cntr_jbm:auto_generated.q[0]
+q[1] <= cntr_jbm:auto_generated.q[1]
+q[2] <= cntr_jbm:auto_generated.q[2]
+q[3] <= cntr_jbm:auto_generated.q[3]
+cout <= cntr_jbm:auto_generated.cout
 eq[0] <= <GND>
 eq[1] <= <GND>
 eq[2] <= <GND>
@@ -59,8 +73,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|contador_temp|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_05m:auto_generated
-cin => time_to_clear.IN1
+|contador_temp|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_jbm:auto_generated
 cin => counter_comb_bita0.CIN
 clock => counter_reg_bit[3].CLK
 clock => counter_reg_bit[2].CLK
@@ -86,17 +99,5 @@ sload => _.IN0
 sload => _.IN0
 sload => _.IN1
 sload => _.IN1
-
-
-|contador_temp|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_05m:auto_generated|cmpr_kkc:cmpr1
-aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => data_wire[0].IN0
-dataa[1] => data_wire[0].IN0
-dataa[2] => data_wire[1].IN0
-dataa[3] => data_wire[1].IN0
-datab[0] => data_wire[0].IN1
-datab[1] => data_wire[0].IN1
-datab[2] => data_wire[1].IN1
-datab[3] => data_wire[1].IN1
 
 

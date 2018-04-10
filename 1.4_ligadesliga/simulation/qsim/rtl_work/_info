@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dD:\guilherme\QuartusProjects\ligadesliga\simulation\qsim
 vcontador_divfreq
-IV4A:7_VcUb]Zl;QkgjFE71
+IiD5`1`N3;ceDH^2dg_FEa2
 VaEE:U<^A4oXAPhhPmfD4>3
-Z1 dC:\Users\grcm\Documents\GitHub\maquinadelavar\1.4_ligadesliga\simulation\qsim
-w1523313469
+Z1 dD:\guilherme\GitHub\maquinadelavar\1.4_ligadesliga\simulation\qsim
+w1523340469
 8contador_divfreq.vo
 Fcontador_divfreq.vo
 L0 31
@@ -16,35 +16,33 @@ r1
 31
 Z3 o-work work -O0
 !i10b 1
-!s100 7h8jeMzRo6bZK0V=6>1<63
+!s100 kNaF^>B=gj[d[?ATELaT30
 !s85 0
-!s108 1523313470.114000
+!s108 1523340473.309000
 !s107 contador_divfreq.vo|
 !s90 -work|work|contador_divfreq.vo|
 !s101 -O0
 vcontador_divfreq_vlg_check_tst
-!i10b 1
-!s100 mGKC6lE6`L[UlW4BCzeli0
-I>_i5Yh@A@A?[5oN`LToco3
+I:eP@ThC9AZTgAko0QaD5S0
 V6cK=iWUgiom>afW6D:[h41
 R1
-Z4 w1523313468
-Z5 8contador_divfreq.vt
-Z6 Fcontador_divfreq.vt
+Z4 w1523340467
+Z5 8contador_divfreq.vwf.vt
+Z6 Fcontador_divfreq.vwf.vt
 L0 59
 R2
 r1
-!s85 0
 31
-Z7 !s108 1523313470.208000
-Z8 !s107 contador_divfreq.vt|
-Z9 !s90 -work|work|contador_divfreq.vt|
-!s101 -O0
+Z7 !s108 1523340474.128000
+Z8 !s107 contador_divfreq.vwf.vt|
+Z9 !s90 -work|work|contador_divfreq.vwf.vt|
 R3
-vcontador_divfreq_vlg_sample_tst
 !i10b 1
-!s100 XglMN63ZClFP=c7RHUQb70
-IVjV?Zk@NelN`RSdW7F[7k1
+!s100 jzV80@?LAPg2ZL2Q]]ZLh0
+!s85 0
+!s101 -O0
+vcontador_divfreq_vlg_sample_tst
+I[ESCnVGGT3EXYYSk]^6_n3
 VaQbEB^a?R][a=f:PcD`Fk0
 R1
 R4
@@ -53,17 +51,17 @@ R6
 L0 29
 R2
 r1
-!s85 0
 31
 R7
 R8
 R9
-!s101 -O0
 R3
-vcontador_divfreq_vlg_vec_tst
 !i10b 1
-!s100 a^5UWh;:E1<SDXn@z?Eka3
-IKi`a0BbCG8iPJO:V]5N5G1
+!s100 PkS6=3iNTNWOS5ofFB2Qd3
+!s85 0
+!s101 -O0
+vcontador_divfreq_vlg_vec_tst
+I?YPZ?8J<V@WaGe1KkRH5Q1
 VNj0azPL=b:VR<Njj4iiPn2
 R1
 R4
@@ -72,45 +70,123 @@ R6
 L0 216
 R2
 r1
-!s85 0
 31
 R7
 R8
 R9
+R3
+!i10b 1
+!s100 VO_48YEL^fC7X_1Jc1k4?3
+!s85 0
+!s101 -O0
+vdebounce
+I[^n?Ih2O5ec2>ENLKZdfN1
+VImLOPfGMTTgNiG4V]5kcZ3
+R1
+w1523341947
+8debounce.vo
+Fdebounce.vo
+L0 31
+R2
+r1
+31
+R3
+!i10b 1
+!s100 AS^obomZ=nT@4_PdeJjNf0
+!s85 0
+!s108 1523341948.669000
+!s107 debounce.vo|
+!s90 -work|work|debounce.vo|
+!s101 -O0
+vdebounce_vlg_check_tst
+!i10b 1
+!s100 OITi@Fe0QNNA37IZbn09`2
+IX=^^OIGX_?[aSKJ[:L`B23
+Ve6hQK8ZZkcm1O^]inKJd41
+R1
+Z10 w1523341944
+Z11 8debounce.vwf.vt
+Z12 Fdebounce.vwf.vt
+L0 59
+R2
+r1
+!s85 0
+31
+Z13 !s108 1523341948.873000
+Z14 !s107 debounce.vwf.vt|
+Z15 !s90 -work|work|debounce.vwf.vt|
+!s101 -O0
+R3
+vdebounce_vlg_sample_tst
+!i10b 1
+!s100 e[l0eV:BFzd<L^AeZ0M]a0
+InGiE?UmmKe48MoD08S6JY3
+VBDD2^3NBQ=0K]6N=EZ:U40
+R1
+R10
+R11
+R12
+L0 29
+R2
+r1
+!s85 0
+31
+R13
+R14
+R15
+!s101 -O0
+R3
+vdebounce_vlg_vec_tst
+!i10b 1
+!s100 m7@o=`om>gZCdeV[z6@7Y2
+I[;Ymj2TL_`KI58M=6ET0P1
+VT1ciofend0O@PkI`W1gTc3
+R1
+R10
+R11
+R12
+L0 154
+R2
+r1
+!s85 0
+31
+R13
+R14
+R15
 !s101 -O0
 R3
 Eligadesliga
-Z10 w1523153044
-Z11 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z12 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z13 dD:\guilherme\QuartusProjects\ligadesliga\simulation\qsim
-Z14 8D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
-Z15 FD:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
+Z16 w1523153044
+Z17 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z18 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z19 dD:\guilherme\QuartusProjects\ligadesliga\simulation\qsim
+Z20 8D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
+Z21 FD:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
 l0
 L4
 V`nW_:Y=0]=lV:M?mVUi]51
-Z16 OV;C;10.1d;51
+Z22 OV;C;10.1d;51
 31
-Z17 !s108 1523199273.020000
-Z18 !s90 -reportprogress|300|-93|-work|work|D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
-Z19 !s107 D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
-Z20 o-93 -work work -O0
-Z21 tExplicit 1
+Z23 !s108 1523199273.020000
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
+Z25 !s107 D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
+Z26 o-93 -work work -O0
+Z27 tExplicit 1
 !s100 ahhoG1MT6l8DUdY72J5;F0
 !i10b 1
 Alogica
-R11
-R12
+R17
+R18
 DEx4 work 11 ligadesliga 0 22 `nW_:Y=0]=lV:M?mVUi]51
 l24
 L12
 VLeGQdn6Vb;LQ1K4gO31=H2
-R16
+R22
 31
-R17
-R18
-R19
-R20
-R21
+R23
+R24
+R25
+R26
+R27
 !s100 7Y[4U:7XcfQ;bTPFbgg_C3
 !i10b 1

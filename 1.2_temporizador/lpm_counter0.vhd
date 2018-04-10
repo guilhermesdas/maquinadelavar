@@ -87,7 +87,7 @@ BEGIN
 
 	LPM_COUNTER_component : LPM_COUNTER
 	GENERIC MAP (
-		lpm_direction => "UP",
+		lpm_direction => "DOWN",
 		lpm_modulus => 10,
 		lpm_port_updown => "PORT_UNUSED",
 		lpm_type => "LPM_COUNTER",
@@ -119,7 +119,7 @@ END SYN;
 -- Retrieval info: PRIVATE: CNT_EN NUMERIC "1"
 -- Retrieval info: PRIVATE: CarryIn NUMERIC "1"
 -- Retrieval info: PRIVATE: CarryOut NUMERIC "1"
--- Retrieval info: PRIVATE: Direction NUMERIC "0"
+-- Retrieval info: PRIVATE: Direction NUMERIC "1"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone IV GX"
 -- Retrieval info: PRIVATE: ModulusCounter NUMERIC "1"
 -- Retrieval info: PRIVATE: ModulusValue NUMERIC "10"
@@ -131,7 +131,7 @@ END SYN;
 -- Retrieval info: PRIVATE: nBit NUMERIC "4"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
--- Retrieval info: CONSTANT: LPM_DIRECTION STRING "UP"
+-- Retrieval info: CONSTANT: LPM_DIRECTION STRING "DOWN"
 -- Retrieval info: CONSTANT: LPM_MODULUS NUMERIC "10"
 -- Retrieval info: CONSTANT: LPM_PORT_UPDOWN STRING "PORT_UNUSED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
@@ -155,6 +155,6 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: lpm

@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
--- CREATED		"Sun Apr 08 19:59:50 2018"
+-- CREATED		"Tue Apr 10 03:06:31 2018"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -24,17 +24,46 @@ LIBRARY work;
 ENTITY contador_temp IS 
 	PORT
 	(
-
+		clock_1hz :  IN  STD_LOGIC;
+		wrTE :  IN  STD_LOGIC;
+		enTE :  IN  STD_LOGIC;
+		rst :  IN  STD_LOGIC;
+		cin :  IN  STD_LOGIC;
+		dtRl0 :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+		cout :  OUT  STD_LOGIC;
+		q :  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END contador_temp;
 
 ARCHITECTURE bdf_type OF contador_temp IS 
+
+COMPONENT lpm_counter0
+	PORT(sclr : IN STD_LOGIC;
+		 sload : IN STD_LOGIC;
+		 clock : IN STD_LOGIC;
+		 cnt_en : IN STD_LOGIC;
+		 cin : IN STD_LOGIC;
+		 data : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 cout : OUT STD_LOGIC;
+		 q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END COMPONENT;
 
 
 
 BEGIN 
 
 
+
+b2v_inst : lpm_counter0
+PORT MAP(sclr => rst,
+		 sload => wrTE,
+		 clock => clock_1hz,
+		 cnt_en => enTE,
+		 cin => cin,
+		 data => dtRl0,
+		 cout => cout,
+		 q => q);
 
 
 END bdf_type;
