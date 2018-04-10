@@ -3,8 +3,8 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY debounce IS
-  --GENERIC(
-  --  counter_size  :  INTEGER := 19); --Tamanho do Contador (19 bits duram cerca de 10.5ms em 50MHz de clock)
+  GENERIC(
+    counter_size  :  INTEGER := 19); --Tamanho do Contador (19 bits duram cerca de 10.5ms em 50MHz de clock)
   PORT(
     clk     : IN  STD_LOGIC; 
     button  : IN  STD_LOGIC;  --Sinal de entrada do botão
@@ -12,7 +12,6 @@ ENTITY debounce IS
 END debounce;
 
 ARCHITECTURE logic OF debounce IS
-  SHARED VARIABLE counter_size  :  INTEGER := 19;
   SIGNAL flipflops   : STD_LOGIC_VECTOR(1 DOWNTO 0); --input flip flops
   SIGNAL counter_set : STD_LOGIC;                    --sync reset to zero
   SIGNAL counter_out : STD_LOGIC_VECTOR(counter_size DOWNTO 0) := (OTHERS => '0'); --counter output

@@ -1,7 +1,0 @@
-
-State Machine - |ligadesliga|est
-Name est.espera est.ligado est.reset est.desligado 
-est.desligado 0 0 0 0 
-est.reset 0 0 1 1 
-est.ligado 0 1 0 1 
-est.espera 1 0 0 1 
