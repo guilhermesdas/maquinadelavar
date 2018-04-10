@@ -45,7 +45,7 @@ ENTITY lpm_counter0 IS
 		cin		: IN STD_LOGIC ;
 		clock		: IN STD_LOGIC ;
 		cout		: OUT STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (2 DOWNTO 0)
+		q		: OUT STD_LOGIC_VECTOR (8 DOWNTO 0)
 	);
 END lpm_counter0;
 
@@ -53,7 +53,7 @@ END lpm_counter0;
 ARCHITECTURE SYN OF lpm_counter0 IS
 
 	SIGNAL sub_wire0	: STD_LOGIC ;
-	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (2 DOWNTO 0);
+	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (8 DOWNTO 0);
 
 
 
@@ -69,21 +69,21 @@ ARCHITECTURE SYN OF lpm_counter0 IS
 			cin	: IN STD_LOGIC ;
 			clock	: IN STD_LOGIC ;
 			cout	: OUT STD_LOGIC ;
-			q	: OUT STD_LOGIC_VECTOR (2 DOWNTO 0)
+			q	: OUT STD_LOGIC_VECTOR (8 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
 	cout    <= sub_wire0;
-	q    <= sub_wire1(2 DOWNTO 0);
+	q    <= sub_wire1(8 DOWNTO 0);
 
 	LPM_COUNTER_component : LPM_COUNTER
 	GENERIC MAP (
 		lpm_direction => "UP",
-		lpm_modulus => 5,
+		lpm_modulus => 10,
 		lpm_port_updown => "PORT_UNUSED",
 		lpm_type => "LPM_COUNTER",
-		lpm_width => 3
+		lpm_width => 9
 	)
 	PORT MAP (
 		cin => cin,
@@ -110,28 +110,28 @@ END SYN;
 -- Retrieval info: PRIVATE: Direction NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone IV GX"
 -- Retrieval info: PRIVATE: ModulusCounter NUMERIC "1"
--- Retrieval info: PRIVATE: ModulusValue NUMERIC "5"
+-- Retrieval info: PRIVATE: ModulusValue NUMERIC "10"
 -- Retrieval info: PRIVATE: SCLR NUMERIC "0"
 -- Retrieval info: PRIVATE: SLOAD NUMERIC "0"
 -- Retrieval info: PRIVATE: SSET NUMERIC "0"
 -- Retrieval info: PRIVATE: SSET_ALL1 NUMERIC "1"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: nBit NUMERIC "3"
+-- Retrieval info: PRIVATE: nBit NUMERIC "9"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: CONSTANT: LPM_DIRECTION STRING "UP"
--- Retrieval info: CONSTANT: LPM_MODULUS NUMERIC "5"
+-- Retrieval info: CONSTANT: LPM_MODULUS NUMERIC "10"
 -- Retrieval info: CONSTANT: LPM_PORT_UPDOWN STRING "PORT_UNUSED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
--- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "3"
+-- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "9"
 -- Retrieval info: USED_PORT: cin 0 0 0 0 INPUT NODEFVAL "cin"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 -- Retrieval info: USED_PORT: cout 0 0 0 0 OUTPUT NODEFVAL "cout"
--- Retrieval info: USED_PORT: q 0 0 3 0 OUTPUT NODEFVAL "q[2..0]"
+-- Retrieval info: USED_PORT: q 0 0 9 0 OUTPUT NODEFVAL "q[8..0]"
 -- Retrieval info: CONNECT: @cin 0 0 0 0 cin 0 0 0 0
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 -- Retrieval info: CONNECT: cout 0 0 0 0 @cout 0 0 0 0
--- Retrieval info: CONNECT: q 0 0 3 0 @q 0 0 3 0
+-- Retrieval info: CONNECT: q 0 0 9 0 @q 0 0 9 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.cmp TRUE

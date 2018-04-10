@@ -47,12 +47,12 @@ applicable agreement for further details.
 	(port
 		(pt 144 48)
 		(output)
-		(text "q[2..0]" (rect 0 0 35 14)(font "Arial" (font_size 8)))
-		(text "q[2..0]" (rect 95 41 123 54)(font "Arial" (font_size 8)))
+		(text "q[8..0]" (rect 0 0 35 14)(font "Arial" (font_size 8)))
+		(text "q[8..0]" (rect 95 41 123 54)(font "Arial" (font_size 8)))
 		(line (pt 144 48)(pt 128 48)(line_width 3))
 	)
 	(drawing
-		(text "modulus 5" (rect 85 30 211 71)(font "Arial" ))
+		(text "modulus 10" (rect 80 30 206 71)(font "Arial" ))
 		(text "up counter" (rect 84 22 211 55)(font "Arial" ))
 		(line (pt 16 16)(pt 16 64))
 		(line (pt 16 16)(pt 128 16))

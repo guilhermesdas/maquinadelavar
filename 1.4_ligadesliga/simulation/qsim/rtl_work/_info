@@ -7,7 +7,7 @@ vcontador_divfreq
 IV4A:7_VcUb]Zl;QkgjFE71
 VaEE:U<^A4oXAPhhPmfD4>3
 Z1 dC:\Users\grcm\Documents\GitHub\maquinadelavar\1.4_ligadesliga\simulation\qsim
-w1523313469
+w1523380421
 8contador_divfreq.vo
 Fcontador_divfreq.vo
 L0 31
@@ -18,13 +18,11 @@ Z3 o-work work -O0
 !i10b 1
 !s100 7h8jeMzRo6bZK0V=6>1<63
 !s85 0
-!s108 1523313470.114000
+!s108 1523380422.166000
 !s107 contador_divfreq.vo|
 !s90 -work|work|contador_divfreq.vo|
 !s101 -O0
 vcontador_divfreq_vlg_check_tst
-!i10b 1
-!s100 mGKC6lE6`L[UlW4BCzeli0
 I>_i5Yh@A@A?[5oN`LToco3
 V6cK=iWUgiom>afW6D:[h41
 R1
@@ -34,16 +32,16 @@ Z6 Fcontador_divfreq.vt
 L0 59
 R2
 r1
-!s85 0
 31
 Z7 !s108 1523313470.208000
 Z8 !s107 contador_divfreq.vt|
 Z9 !s90 -work|work|contador_divfreq.vt|
-!s101 -O0
 R3
-vcontador_divfreq_vlg_sample_tst
 !i10b 1
-!s100 XglMN63ZClFP=c7RHUQb70
+!s100 mGKC6lE6`L[UlW4BCzeli0
+!s85 0
+!s101 -O0
+vcontador_divfreq_vlg_sample_tst
 IVjV?Zk@NelN`RSdW7F[7k1
 VaQbEB^a?R][a=f:PcD`Fk0
 R1
@@ -53,29 +51,31 @@ R6
 L0 29
 R2
 r1
-!s85 0
 31
 R7
 R8
 R9
-!s101 -O0
 R3
+!i10b 1
+!s100 XglMN63ZClFP=c7RHUQb70
+!s85 0
+!s101 -O0
 vcontador_divfreq_vlg_vec_tst
 !i10b 1
-!s100 a^5UWh;:E1<SDXn@z?Eka3
-IKi`a0BbCG8iPJO:V]5N5G1
+!s100 ?gf_63;14WCFzKe;g5BMc1
+IamQSfTkZKS_LTJ4:GVV971
 VNj0azPL=b:VR<Njj4iiPn2
 R1
-R4
+w1523380420
 R5
 R6
-L0 216
+L0 29
 R2
 r1
 !s85 0
 31
-R7
-R8
+!s108 1523380422.283000
+!s107 contador_divfreq.vt|
 R9
 !s101 -O0
 R3

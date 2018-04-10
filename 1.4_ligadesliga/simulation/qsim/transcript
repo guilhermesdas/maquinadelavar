@@ -7,8 +7,6 @@
 # Top level modules:
 # 	contador_divfreq
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module contador_divfreq_vlg_sample_tst
-# -- Compiling module contador_divfreq_vlg_check_tst
 # -- Compiling module contador_divfreq_vlg_vec_tst
 # 
 # Top level modules:
@@ -23,9 +21,6 @@
 # Loading cycloneiv_ver.cycloneiv_io_obuf
 # Loading cycloneiv_ver.cycloneiv_lcell_comb
 # Loading altera_ver.dffeas
-# Loading work.contador_divfreq_vlg_sample_tst
-# Loading work.contador_divfreq_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# Simulation passed !
-# ** Note: $finish    : contador_divfreq.vt(212)
-#    Time: 1 us  Iteration: 0  Instance: /contador_divfreq_vlg_vec_tst/tb_out
+# ** Note: $finish    : contador_divfreq.vt(48)
+#    Time: 1 us  Iteration: 0  Instance: /contador_divfreq_vlg_vec_tst

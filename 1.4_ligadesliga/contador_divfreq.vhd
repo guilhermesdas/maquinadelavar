@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Mon Apr 09 18:22:11 2018"
+-- CREATED		"Tue Apr 10 12:24:30 2018"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -27,7 +27,7 @@ ENTITY contador_divfreq IS
 		clock_fpga :  IN  STD_LOGIC;
 		cin :  IN  STD_LOGIC;
 		cout :  OUT  STD_LOGIC;
-		q :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0)
+		q :  OUT  STD_LOGIC_VECTOR(8 DOWNTO 0)
 	);
 END contador_divfreq;
 
@@ -37,7 +37,7 @@ COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
 		 cin : IN STD_LOGIC;
 		 cout : OUT STD_LOGIC;
-		 q : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+		 q : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
 	);
 END COMPONENT;
 
