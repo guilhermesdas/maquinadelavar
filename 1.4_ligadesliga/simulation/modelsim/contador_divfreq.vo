@@ -14,9 +14,13 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
+<<<<<<< HEAD
 // DATE "04/10/2018 13:13:41"
+=======
+// DATE "04/10/2018 02:06:36"
+>>>>>>> c9d39e56ec6b5776ff24e7033595ff2e732add2a
 
 // 
 // Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -39,11 +43,11 @@ output 	cout;
 output 	[2:0] q;
 
 // Design Ports Information
-// cout	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// q[0]	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// q[1]	=>  Location: PIN_N9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// q[2]	=>  Location: PIN_N8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// cin	=>  Location: PIN_K9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// cout	=>  Location: PIN_L4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// q[0]	=>  Location: PIN_M4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// q[1]	=>  Location: PIN_N4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// q[2]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// cin	=>  Location: PIN_N6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clock_fpga	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
@@ -58,19 +62,71 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \clock_fpga~input_o ;
-wire \clock_fpga~inputclkctrl_outclk ;
 wire \cout~output_o ;
 wire \q[0]~output_o ;
 wire \q[1]~output_o ;
 wire \q[2]~output_o ;
+wire \clock_fpga~input_o ;
+wire \clock_fpga~inputclkctrl_outclk ;
 wire \cin~input_o ;
-wire \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout ;
 wire \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0_combout ;
 wire \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[0]~2_combout ;
+wire \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout ;
 wire \b2v_inst|LPM_COUNTER_component|auto_generated|cout_actual~0_combout ;
 wire [2:0] \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
 
+
+// Location: IOOBUF_X8_Y0_N9
+cycloneiv_io_obuf \cout~output (
+	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|cout_actual~0_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\cout~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \cout~output .bus_hold = "false";
+defparam \cout~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X8_Y0_N2
+cycloneiv_io_obuf \q[0]~output (
+	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\q[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \q[0]~output .bus_hold = "false";
+defparam \q[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X10_Y0_N9
+cycloneiv_io_obuf \q[1]~output (
+	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\q[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \q[1]~output .bus_hold = "false";
+defparam \q[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X12_Y0_N9
+cycloneiv_io_obuf \q[2]~output (
+	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\q[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \q[2]~output .bus_hold = "false";
+defparam \q[2]~output .open_drain_output = "false";
+// synopsys translate_on
 
 // Location: IOIBUF_X16_Y0_N15
 cycloneiv_io_ibuf \clock_fpga~input (
@@ -95,59 +151,7 @@ defparam \clock_fpga~inputclkctrl .clock_type = "global clock";
 defparam \clock_fpga~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: IOOBUF_X14_Y0_N2
-cycloneiv_io_obuf \cout~output (
-	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|cout_actual~0_combout ),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\cout~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \cout~output .bus_hold = "false";
-defparam \cout~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X22_Y0_N9
-cycloneiv_io_obuf \q[0]~output (
-	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\q[0]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \q[0]~output .bus_hold = "false";
-defparam \q[0]~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X20_Y0_N2
-cycloneiv_io_obuf \q[1]~output (
-	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\q[1]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \q[1]~output .bus_hold = "false";
-defparam \q[1]~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X20_Y0_N9
-cycloneiv_io_obuf \q[2]~output (
-	.i(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\q[2]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \q[2]~output .bus_hold = "false";
-defparam \q[2]~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOIBUF_X22_Y0_N1
+// Location: IOIBUF_X12_Y0_N1
 cycloneiv_io_ibuf \cin~input (
 	.i(cin),
 	.ibar(gnd),
@@ -157,62 +161,26 @@ defparam \cin~input .bus_hold = "false";
 defparam \cin~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X22_Y1_N2
-cycloneiv_lcell_comb \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1 (
-// Equation(s):
-// \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout  = \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] $ (((\cin~input_o  & \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0])))
-
-	.dataa(gnd),
-	.datab(\cin~input_o ),
-	.datac(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
-	.datad(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
-	.cin(gnd),
-	.combout(\b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1 .lut_mask = 16'h3CF0;
-defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X22_Y1_N3
-dffeas \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] (
-	.clk(\clock_fpga~inputclkctrl_outclk ),
-	.d(\b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .is_wysiwyg = "true";
-defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X22_Y1_N28
+// Location: LCCOMB_X12_Y1_N28
 cycloneiv_lcell_comb \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0 (
 // Equation(s):
-// \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0_combout  = (\cin~input_o  & ((\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] $ 
-// (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]))) # (!\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] & 
-// \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0])))) # (!\cin~input_o  & (((\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]))))
+// \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0_combout  = (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] $ (((\cin~input_o  & 
+// \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]))))) # (!\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] & 
+// ((\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]) # (!\cin~input_o ))))
 
-	.dataa(\cin~input_o ),
-	.datab(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
+	.dataa(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
+	.datab(\cin~input_o ),
 	.datac(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]),
 	.datad(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
 	.cin(gnd),
 	.combout(\b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0 .lut_mask = 16'h78D0;
+defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0 .lut_mask = 16'h78B0;
 defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X22_Y1_N29
+// Location: FF_X12_Y1_N29
 dffeas \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] (
 	.clk(\clock_fpga~inputclkctrl_outclk ),
 	.d(\b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[2]~0_combout ),
@@ -231,7 +199,7 @@ defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] .is_w
 defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X22_Y1_N12
+// Location: LCCOMB_X12_Y1_N0
 cycloneiv_lcell_comb \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[0]~2 (
 // Equation(s):
 // \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[0]~2_combout  = (\cin~input_o  & (!\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0] & ((\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]) # 
@@ -249,7 +217,7 @@ defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[0]~2 .lut_
 defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[0]~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X22_Y1_N13
+// Location: FF_X12_Y1_N1
 dffeas \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] (
 	.clk(\clock_fpga~inputclkctrl_outclk ),
 	.d(\b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[0]~2_combout ),
@@ -268,14 +236,50 @@ defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] .is_w
 defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X22_Y1_N22
+// Location: LCCOMB_X12_Y1_N6
+cycloneiv_lcell_comb \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1 (
+// Equation(s):
+// \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout  = \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] $ (((\cin~input_o  & \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0])))
+
+	.dataa(gnd),
+	.datab(\cin~input_o ),
+	.datac(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
+	.datad(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
+	.cin(gnd),
+	.combout(\b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1 .lut_mask = 16'h3CF0;
+defparam \b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X12_Y1_N7
+dffeas \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] (
+	.clk(\clock_fpga~inputclkctrl_outclk ),
+	.d(\b2v_inst|LPM_COUNTER_component|auto_generated|trigger_mux_w[1]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .is_wysiwyg = "true";
+defparam \b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X12_Y1_N2
 cycloneiv_lcell_comb \b2v_inst|LPM_COUNTER_component|auto_generated|cout_actual~0 (
 // Equation(s):
-// \b2v_inst|LPM_COUNTER_component|auto_generated|cout_actual~0_combout  = (\cin~input_o  & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0] $ 
-// (!\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]))))
+// \b2v_inst|LPM_COUNTER_component|auto_generated|cout_actual~0_combout  = (\cin~input_o  & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] & (\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] $ 
+// (!\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]))))
 
-	.dataa(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
-	.datab(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
+	.dataa(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
+	.datab(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
 	.datac(\cin~input_o ),
 	.datad(\b2v_inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]),
 	.cin(gnd),

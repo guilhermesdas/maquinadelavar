@@ -81,7 +81,7 @@ applicable agreement for further details.
 	)
 	(drawing
 		(text "modulus 10" (rect 80 30 206 71)(font "Arial" ))
-		(text "up counter" (rect 84 22 211 55)(font "Arial" ))
+		(text "down counter" (rect 73 22 200 55)(font "Arial" ))
 		(line (pt 16 16)(pt 16 160))
 		(line (pt 16 16)(pt 128 16))
 		(line (pt 16 160)(pt 128 160))

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 Fitter Status : Successful - Tue Apr 10 12:21:26 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+=======
+Fitter Status : Successful - Tue Apr 10 02:05:37 2018
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+>>>>>>> c9d39e56ec6b5776ff24e7033595ff2e732add2a
 Revision Name : contador_divfreq
 Top-level Entity Name : contador_divfreq
 Family : Cyclone IV GX

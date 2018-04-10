@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\guilherme\GitHub\maquinadelavar\1.2_temporizador\simulation\qsim
+vcontador_temp
+Z1 !s100 A7mJTIaDo_LQNnBAMLg:T0
+Z2 I5ZQz^bI:T0A]j]8oZA;b11
+Z3 V7h`46`[Q7L1d`4z>eSQJL3
+Z4 dD:\guilherme\GitHub\maquinadelavar\1.2_temporizador\simulation\qsim
+Z5 w1523344501
+Z6 8contador_temp.vo
+Z7 Fcontador_temp.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|contador_temp.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1523344503.090000
+Z12 !s107 contador_temp.vo|
+!s101 -O0
+vcontador_temp_vlg_check_tst
+!i10b 1
+Z13 !s100 8@?;aE=SD6bo9UaDfZTTi3
+Z14 IoE_U;XAi[5lgjbbhYgiez2
+Z15 V`4SjCkV_B:?2U@kRe7>0F1
+R4
+Z16 w1523344498
+Z17 8contador_temp.vwf.vt
+Z18 Fcontador_temp.vwf.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z19 !s108 1523344503.246000
+Z20 !s107 contador_temp.vwf.vt|
+Z21 !s90 -work|work|contador_temp.vwf.vt|
+!s101 -O0
+R10
+vcontador_temp_vlg_sample_tst
+!i10b 1
+Z22 !s100 ]6[8T34RM^e4A0n0OH?<61
+Z23 Iheck7Q84Djd2NPnU2d9FR0
+Z24 VN42S?]k_Xm37M=W@S@45[0
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vcontador_temp_vlg_vec_tst
+!i10b 1
+!s100 mHK8IGKE4[8J]^5AC`1NN1
+I8dNoLnVOX3MeB[hG45kcC0
+Z25 VNBCOSbFfNS<O^3>_4icgF0
+R4
+R16
+R17
+R18
+Z26 L0 242
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
