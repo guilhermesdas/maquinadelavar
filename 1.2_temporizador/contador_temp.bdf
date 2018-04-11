@@ -117,7 +117,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 552 112 728 128)
+	(rect 536 112 712 128)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "q[3..0]" (rect 90 0 121 12)(font "Arial" ))
 	(pt 0 8)
@@ -133,7 +133,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 552 152 728 168)
+	(rect 536 144 712 160)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "cout" (rect 90 0 111 12)(font "Arial" ))
 	(pt 0 8)
@@ -231,22 +231,8 @@ applicable agreement for further details.
 	(pt 344 96)
 )
 (connector
-	(pt 488 160)
-	(pt 552 160)
-)
-(connector
 	(pt 488 144)
 	(pt 520 144)
-	(bus)
-)
-(connector
-	(pt 520 144)
-	(pt 520 120)
-	(bus)
-)
-(connector
-	(pt 520 120)
-	(pt 552 120)
 	(bus)
 )
 (connector
@@ -295,4 +281,26 @@ applicable agreement for further details.
 (connector
 	(pt 304 192)
 	(pt 344 192)
+)
+(connector
+	(pt 520 144)
+	(pt 520 120)
+	(bus)
+)
+(connector
+	(pt 520 120)
+	(pt 536 120)
+	(bus)
+)
+(connector
+	(pt 496 160)
+	(pt 496 152)
+)
+(connector
+	(pt 488 160)
+	(pt 496 160)
+)
+(connector
+	(pt 496 152)
+	(pt 536 152)
 )

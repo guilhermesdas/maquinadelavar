@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/10/2018 03:14:58"
+// Generated on "04/10/2018 23:30:24"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    contador_temp
 // 
@@ -277,8 +277,8 @@ end
 always
 begin
 	clock_1hz = 1'b0;
-	clock_1hz = #20000 1'b1;
-	#20000;
+	clock_1hz = #10000 1'b1;
+	#10000;
 end 
 // dtRl0[ 3 ]
 initial
@@ -306,18 +306,14 @@ initial
 begin
 	enTE = 1'b0;
 	enTE = #140000 1'b1;
-	enTE = #630000 1'b0;
+	enTE = #660000 1'b0;
 end 
 
 // rst
 initial
 begin
 	rst = 1'b0;
-	rst = #290000 1'b1;
-	rst = #20000 1'b0;
-	rst = #210000 1'b1;
-	rst = #20000 1'b0;
-	rst = #60000 1'b1;
+	rst = #410000 1'b1;
 	rst = #20000 1'b0;
 end 
 
@@ -325,8 +321,8 @@ end
 initial
 begin
 	wrTE = 1'b0;
-	wrTE = #200000 1'b1;
-	wrTE = #40000 1'b0;
+	wrTE = #570000 1'b1;
+	wrTE = #30000 1'b0;
 end 
 
 contador_temp_vlg_sample_tst tb_sample (
