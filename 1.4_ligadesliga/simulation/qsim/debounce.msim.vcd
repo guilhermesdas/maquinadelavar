@@ -3,7 +3,7 @@ $comment
 		vcd file debounce.msim.vcd -direction
 $end
 $date
-	Tue Apr 10 21:59:48 2018
+	Tue Apr 10 22:43:56 2018
 $end
 $version
 	ModelSim Version 10.1d
@@ -13,7 +13,7 @@ $timescale
 $end
 $scope module debounce_vlg_vec_tst $end
 $var reg 1 ! button $end
-$var reg 1 " clk $end
+$var reg 1 " clock $end
 $var wire 1 # result $end
 $var wire 1 $ sampler $end
 $scope module i1 $end
@@ -24,95 +24,15 @@ $var tri1 1 ( devclrn $end
 $var tri1 1 ) devpor $end
 $var tri1 1 * devoe $end
 $var wire 1 + result~output_o $end
-$var wire 1 , clk~input_o $end
-$var wire 1 - clk~inputclkctrl_outclk $end
+$var wire 1 , clock~input_o $end
+$var wire 1 - clock~inputclkctrl_outclk $end
 $var wire 1 . button~input_o $end
-$var wire 1 / flipflops[0]~feeder_combout $end
-$var wire 1 0 counter_out[0]~1_combout $end
-$var wire 1 1 result~1_combout $end
-$var wire 1 2 Add0~0_combout $end
-$var wire 1 3 counter_out[0]~20_combout $end
-$var wire 1 4 Add0~1 $end
-$var wire 1 5 Add0~2_combout $end
-$var wire 1 6 counter_out[1]~19_combout $end
-$var wire 1 7 Add0~3 $end
-$var wire 1 8 Add0~4_combout $end
-$var wire 1 9 counter_out[2]~18_combout $end
-$var wire 1 : Add0~5 $end
-$var wire 1 ; Add0~6_combout $end
-$var wire 1 < counter_out[3]~17_combout $end
-$var wire 1 = Add0~7 $end
-$var wire 1 > Add0~8_combout $end
-$var wire 1 ? counter_out[4]~16_combout $end
-$var wire 1 @ Add0~9 $end
-$var wire 1 A Add0~10_combout $end
-$var wire 1 B counter_out[5]~15_combout $end
-$var wire 1 C Add0~11 $end
-$var wire 1 D Add0~12_combout $end
-$var wire 1 E counter_out[6]~14_combout $end
-$var wire 1 F Add0~13 $end
-$var wire 1 G Add0~14_combout $end
-$var wire 1 H counter_out[7]~13_combout $end
-$var wire 1 I Add0~15 $end
-$var wire 1 J Add0~16_combout $end
-$var wire 1 K counter_out[8]~12_combout $end
-$var wire 1 L Add0~17 $end
-$var wire 1 M Add0~18_combout $end
-$var wire 1 N counter_out[9]~11_combout $end
-$var wire 1 O Add0~19 $end
-$var wire 1 P Add0~20_combout $end
-$var wire 1 Q counter_out[10]~10_combout $end
-$var wire 1 R Add0~21 $end
-$var wire 1 S Add0~22_combout $end
-$var wire 1 T counter_out[11]~9_combout $end
-$var wire 1 U Add0~23 $end
-$var wire 1 V Add0~24_combout $end
-$var wire 1 W counter_out[12]~8_combout $end
-$var wire 1 X Add0~25 $end
-$var wire 1 Y Add0~26_combout $end
-$var wire 1 Z counter_out[13]~7_combout $end
-$var wire 1 [ Add0~27 $end
-$var wire 1 \ Add0~28_combout $end
-$var wire 1 ] counter_out[14]~6_combout $end
-$var wire 1 ^ Add0~29 $end
-$var wire 1 _ Add0~30_combout $end
-$var wire 1 ` counter_out[15]~5_combout $end
-$var wire 1 a Add0~31 $end
-$var wire 1 b Add0~32_combout $end
-$var wire 1 c counter_out[16]~4_combout $end
-$var wire 1 d Add0~33 $end
-$var wire 1 e Add0~34_combout $end
-$var wire 1 f counter_out[17]~3_combout $end
-$var wire 1 g Add0~35 $end
-$var wire 1 h Add0~36_combout $end
-$var wire 1 i counter_out[18]~2_combout $end
-$var wire 1 j Add0~37 $end
-$var wire 1 k Add0~38_combout $end
-$var wire 1 l counter_out~0_combout $end
-$var wire 1 m result~0_combout $end
-$var wire 1 n result~reg0_q $end
-$var wire 1 o counter_out [19] $end
-$var wire 1 p counter_out [18] $end
-$var wire 1 q counter_out [17] $end
-$var wire 1 r counter_out [16] $end
-$var wire 1 s counter_out [15] $end
-$var wire 1 t counter_out [14] $end
-$var wire 1 u counter_out [13] $end
-$var wire 1 v counter_out [12] $end
-$var wire 1 w counter_out [11] $end
-$var wire 1 x counter_out [10] $end
-$var wire 1 y counter_out [9] $end
-$var wire 1 z counter_out [8] $end
-$var wire 1 { counter_out [7] $end
-$var wire 1 | counter_out [6] $end
-$var wire 1 } counter_out [5] $end
-$var wire 1 ~ counter_out [4] $end
-$var wire 1 !! counter_out [3] $end
-$var wire 1 "! counter_out [2] $end
-$var wire 1 #! counter_out [1] $end
-$var wire 1 $! counter_out [0] $end
-$var wire 1 %! flipflops [1] $end
-$var wire 1 &! flipflops [0] $end
+$var wire 1 / OP1~feeder_combout $end
+$var wire 1 0 OP1~q $end
+$var wire 1 1 OP2~feeder_combout $end
+$var wire 1 2 OP2~q $end
+$var wire 1 3 OP3~q $end
+$var wire 1 4 result~0_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -133,129 +53,18 @@ x'
 0-
 0.
 0/
-10
+00
 01
-12
-13
+02
+03
 04
-05
-06
-17
-08
-09
-0:
-0;
-0<
-1=
-0>
-0?
-0@
-0A
-0B
-1C
-0D
-0E
-0F
-0G
-0H
-1I
-0J
-0K
-0L
-0M
-0N
-1O
-0P
-0Q
-0R
-0S
-0T
-1U
-0V
-0W
-0X
-0Y
-0Z
-1[
-0\
-0]
-0^
-0_
-0`
-1a
-0b
-0c
-0d
-0e
-0f
-1g
-0h
-0i
-0j
-0k
-0l
-0m
-0n
-0$!
-0#!
-0"!
-0!!
-0~
-0}
-0|
-0{
-0z
-0y
-0x
-0w
-0v
-0u
-0t
-0s
-0r
-0q
-0p
-0o
-0&!
-0%!
 $end
 #10000
 1"
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #20000
-0"
-0,
-0-
-1$
-#30000
-1"
-1,
-1-
-0$
-1#!
-0$!
-07
-05
-04
-12
-18
-06
-17
-15
-13
-19
-08
-16
-09
-#40000
 1!
 0"
 1.
@@ -263,46 +72,40 @@ $end
 0-
 1$
 1/
+#30000
+1"
+1,
+1-
+0$
+10
+11
+#40000
+0"
+0,
+0-
+1$
 #50000
 1"
 1,
 1-
 0$
-1$!
-1&!
-14
-02
-00
-07
-05
-03
-06
-18
+12
 #60000
+0!
 0"
+0.
 0,
 0-
 1$
+0/
 #70000
 1"
 1,
 1-
 0$
-0#!
-0$!
-1%!
-17
-15
-04
-12
-10
-08
-16
-05
 13
-19
-09
-06
+00
+01
 #80000
 0"
 0,
@@ -313,12 +116,7 @@ $end
 1,
 1-
 0$
-1$!
-14
 02
-15
-03
-16
 #100000
 0"
 0,
@@ -329,21 +127,7 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-18
-06
-17
-15
-13
-19
-08
-16
-09
+03
 #120000
 0"
 0,
@@ -354,15 +138,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-18
-06
-19
 #140000
 0"
 0,
@@ -373,27 +148,6 @@ $end
 1,
 1-
 0$
-1"!
-0#!
-0$!
-1:
-08
-17
-15
-04
-12
-1;
-09
-0:
-18
-16
-05
-13
-1<
-0;
-19
-06
-0<
 #160000
 0"
 0,
@@ -404,12 +158,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #180000
 0"
 0,
@@ -420,27 +168,6 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-1:
-08
-06
-17
-15
-13
-1;
-09
-0:
-18
-16
-1<
-0;
-19
-0<
 #200000
 0"
 0,
@@ -451,18 +178,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-1:
-08
-06
-1;
-09
-1<
 #220000
 0"
 0,
@@ -473,33 +188,6 @@ $end
 1,
 1-
 0$
-1!!
-0"!
-0#!
-0$!
-0=
-0;
-0:
-18
-17
-15
-04
-12
-1>
-0<
-1=
-1;
-19
-08
-16
-05
-13
-1?
-0>
-1<
-09
-06
-0?
 #240000
 0"
 0,
@@ -510,12 +198,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #260000
 0"
 0,
@@ -526,40 +208,19 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-18
-06
-17
-15
-13
-19
-08
-16
-09
 #280000
 0"
 0,
 0-
 1$
 #290000
+1!
 1"
+1.
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-18
-06
-19
+1/
 #300000
 0"
 0,
@@ -570,33 +231,8 @@ $end
 1,
 1-
 0$
-1"!
-0#!
-0$!
-1:
-08
-17
-15
-04
-12
-0=
-0;
-09
-0:
-18
-16
-05
-13
-1>
-0<
-1=
-1;
-19
-06
-1?
-0>
-1<
-0?
+10
+11
 #320000
 0"
 0,
@@ -607,12 +243,7 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
+12
 #340000
 0"
 0,
@@ -623,33 +254,10 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-1:
-08
-06
-17
-15
 13
-0=
-0;
-09
-0:
-18
-16
-1>
-0<
-1=
-1;
-19
-1?
-0>
-1<
-0?
+14
+1+
+1#
 #360000
 0"
 0,
@@ -660,64 +268,19 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-1:
-08
-06
-0=
-0;
-09
-1>
-0<
-1?
 #380000
 0"
 0,
 0-
 1$
 #390000
+0!
 1"
+0.
 1,
 1-
 0$
-1~
-0!!
-0"!
-0#!
-0$!
-1@
-0>
-1=
-1;
-0:
-18
-17
-15
-04
-12
-1A
-0?
-0@
-1>
-1<
-0;
-19
-08
-16
-05
-13
-1B
-0A
-1?
-0<
-09
-06
-0B
+0/
 #400000
 0"
 0,
@@ -728,12 +291,11 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
+00
+01
+04
+0+
+0#
 #420000
 0"
 0,
@@ -744,21 +306,7 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-18
-06
-17
-15
-13
-19
-08
-16
-09
+02
 #440000
 0"
 0,
@@ -769,46 +317,22 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
 03
-18
-06
-19
 #460000
+1!
 0"
+1.
 0,
 0-
 1$
+1/
 #470000
 1"
 1,
 1-
 0$
-1"!
-0#!
-0$!
-1:
-08
-17
-15
-04
-12
-1;
-09
-0:
-18
-16
-05
-13
-1<
-0;
-19
-06
-0<
+10
+11
 #480000
 0"
 0,
@@ -819,12 +343,7 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
+12
 #500000
 0"
 0,
@@ -835,27 +354,10 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-1:
-08
-06
-17
-15
 13
-1;
-09
-0:
-18
-16
-1<
-0;
-19
-0<
+14
+1+
+1#
 #520000
 0"
 0,
@@ -866,18 +368,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-1:
-08
-06
-1;
-09
-1<
 #540000
 0"
 0,
@@ -888,39 +378,6 @@ $end
 1,
 1-
 0$
-1!!
-0"!
-0#!
-0$!
-0=
-0;
-0:
-18
-17
-15
-04
-12
-1@
-0>
-0<
-1=
-1;
-19
-08
-16
-05
-13
-1A
-0?
-0@
-1>
-1<
-09
-06
-1B
-0A
-1?
-0B
 #560000
 0"
 0,
@@ -931,12 +388,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #580000
 0"
 0,
@@ -947,21 +398,6 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-18
-06
-17
-15
-13
-19
-08
-16
-09
 #600000
 0"
 0,
@@ -972,15 +408,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-18
-06
-19
 #620000
 0"
 0,
@@ -991,39 +418,6 @@ $end
 1,
 1-
 0$
-1"!
-0#!
-0$!
-1:
-08
-17
-15
-04
-12
-0=
-0;
-09
-0:
-18
-16
-05
-13
-1@
-0>
-0<
-1=
-1;
-19
-06
-1A
-0?
-0@
-1>
-1<
-1B
-0A
-1?
-0B
 #640000
 0"
 0,
@@ -1034,12 +428,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #660000
 0"
 0,
@@ -1050,39 +438,6 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-1:
-08
-06
-17
-15
-13
-0=
-0;
-09
-0:
-18
-16
-1@
-0>
-0<
-1=
-1;
-19
-1A
-0?
-0@
-1>
-1<
-1B
-0A
-1?
-0B
 #680000
 0"
 0,
@@ -1093,24 +448,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-1:
-08
-06
-0=
-0;
-09
-1@
-0>
-0<
-1A
-0?
-1B
 #700000
 0"
 0,
@@ -1121,45 +458,6 @@ $end
 1,
 1-
 0$
-1}
-0~
-0!!
-0"!
-0#!
-0$!
-0C
-0A
-0@
-1>
-1=
-1;
-0:
-18
-17
-15
-04
-12
-1D
-0B
-1C
-1A
-1?
-0>
-1<
-0;
-19
-08
-16
-05
-13
-1E
-0D
-1B
-0?
-0<
-09
-06
-0E
 #720000
 0"
 0,
@@ -1170,12 +468,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #740000
 0"
 0,
@@ -1186,21 +478,6 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-18
-06
-17
-15
-13
-19
-08
-16
-09
 #760000
 0"
 0,
@@ -1211,46 +488,24 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-18
-06
-19
 #780000
+0!
 0"
+0.
 0,
 0-
 1$
+0/
 #790000
 1"
 1,
 1-
 0$
-1"!
-0#!
-0$!
-1:
-08
-17
-15
+00
+01
 04
-12
-1;
-09
-0:
-18
-16
-05
-13
-1<
-0;
-19
-06
-0<
+0+
+0#
 #800000
 0"
 0,
@@ -1261,12 +516,7 @@ $end
 1,
 1-
 0$
-1$!
-14
 02
-15
-03
-16
 #820000
 0"
 0,
@@ -1277,27 +527,7 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-1:
-08
-06
-17
-15
-13
-1;
-09
-0:
-18
-16
-1<
-0;
-19
-0<
+03
 #840000
 0"
 0,
@@ -1308,18 +538,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-1:
-08
-06
-1;
-09
-1<
 #860000
 0"
 0,
@@ -1330,33 +548,6 @@ $end
 1,
 1-
 0$
-1!!
-0"!
-0#!
-0$!
-0=
-0;
-0:
-18
-17
-15
-04
-12
-1>
-0<
-1=
-1;
-19
-08
-16
-05
-13
-1?
-0>
-1<
-09
-06
-0?
 #880000
 0"
 0,
@@ -1367,12 +558,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #900000
 0"
 0,
@@ -1383,21 +568,6 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-18
-06
-17
-15
-13
-19
-08
-16
-09
 #920000
 0"
 0,
@@ -1408,15 +578,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-07
-05
-03
-18
-06
-19
 #940000
 0"
 0,
@@ -1427,33 +588,6 @@ $end
 1,
 1-
 0$
-1"!
-0#!
-0$!
-1:
-08
-17
-15
-04
-12
-0=
-0;
-09
-0:
-18
-16
-05
-13
-1>
-0<
-1=
-1;
-19
-06
-1?
-0>
-1<
-0?
 #960000
 0"
 0,
@@ -1464,12 +598,6 @@ $end
 1,
 1-
 0$
-1$!
-14
-02
-15
-03
-16
 #980000
 0"
 0,
@@ -1480,31 +608,4 @@ $end
 1,
 1-
 0$
-1#!
-0$!
-07
-05
-04
-12
-1:
-08
-06
-17
-15
-13
-0=
-0;
-09
-0:
-18
-16
-1>
-0<
-1=
-1;
-19
-1?
-0>
-1<
-0?
 #1000000

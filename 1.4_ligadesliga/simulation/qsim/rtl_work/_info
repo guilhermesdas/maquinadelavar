@@ -129,10 +129,10 @@ vcontador_divfreq_vlg_vec_tst
 I?YPZ?8J<V@WaGe1KkRH5Q1
 R3
 vdebounce
-I[^n?Ih2O5ec2>ENLKZdfN1
-VImLOPfGMTTgNiG4V]5kcZ3
+I<eR?SP9P?H[9=Pk`>2J7m2
+VDdnZO5K27o@g3cL9G?8>Y1
 R2
-w1523411985
+w1523414633
 8debounce.vo
 Fdebounce.vo
 L0 31
@@ -141,36 +141,34 @@ r1
 31
 R5
 !i10b 1
-!s100 AS^obomZ=nT@4_PdeJjNf0
+!s100 7@kIKPf:X=?B14Z?YA=P]1
 !s85 0
-!s108 1523411987.008000
+!s108 1523414635.183000
 !s107 debounce.vo|
 !s90 -work|work|debounce.vo|
 !s101 -O0
 vdebounce_vlg_check_tst
-!i10b 1
-!s100 OITi@Fe0QNNA37IZbn09`2
 IX=^^OIGX_?[aSKJ[:L`B23
 Ve6hQK8ZZkcm1O^]inKJd41
 R2
-Z13 w1523411982
+Z13 w1523414630
 Z14 8debounce.vwf.vt
 Z15 Fdebounce.vwf.vt
 L0 59
 R6
 r1
-!s85 0
 31
-Z16 !s108 1523411987.284000
+Z16 !s108 1523414635.340000
 Z17 !s107 debounce.vwf.vt|
 Z18 !s90 -work|work|debounce.vwf.vt|
-!s101 -O0
 R5
-vdebounce_vlg_sample_tst
 !i10b 1
-!s100 e[l0eV:BFzd<L^AeZ0M]a0
-InGiE?UmmKe48MoD08S6JY3
-VBDD2^3NBQ=0K]6N=EZ:U40
+!s100 OITi@Fe0QNNA37IZbn09`2
+!s85 0
+!s101 -O0
+vdebounce_vlg_sample_tst
+IdOoHmSbVng4AbL3`gMM5B2
+VG_1cV4zP:^Cig^NPU`39C2
 R2
 R13
 R14
@@ -178,17 +176,17 @@ R15
 L0 29
 R6
 r1
-!s85 0
 31
 R16
 R17
 R18
-!s101 -O0
 R5
-vdebounce_vlg_vec_tst
 !i10b 1
-!s100 1TUZ:4[SZXhRolSSaI4>A2
-IIXF`<1KdGd2a@=e6VAI>B3
+!s100 fS=PNFSEQo<FJV4d[VEf?2
+!s85 0
+!s101 -O0
+vdebounce_vlg_vec_tst
+IbQDzHbgg<UgSJMdEKc=gN3
 VT1ciofend0O@PkI`W1gTc3
 R2
 R13
@@ -197,13 +195,15 @@ R15
 L0 154
 R6
 r1
-!s85 0
 31
 R16
 R17
 R18
-!s101 -O0
 R5
+!i10b 1
+!s100 zN0>5A:JDbEcZ6FU09j@`3
+!s85 0
+!s101 -O0
 vdivfreq
 I=z=GLGASRTTVGK^^e^0Bj2
 VIf0WKG52o5N2PGz]SZb5K0
@@ -280,38 +280,114 @@ R5
 !s100 WCRZ3=7QE<`i4MoZ53zh:0
 !s85 0
 !s101 -O0
+vhistoria4
+IkWk0K76o`NkLlF3nb4YHT0
+VQAajQBjU73jm7Kf@REiDg2
+R2
+w1523415731
+8historia4.vo
+Fhistoria4.vo
+L0 31
+R6
+r1
+31
+R5
+!i10b 1
+!s100 Sdk5c6>6Tg^S6Y:[GXI8W2
+!s85 0
+!s108 1523415732.601000
+!s107 historia4.vo|
+!s90 -work|work|historia4.vo|
+!s101 -O0
+vhistoria4_vlg_check_tst
+!i10b 1
+!s100 `5fR3?UR_[Fffj^cJSEK_0
+I4O7I?Qe2Z^M1@3`cOd=mS2
+V6L6cJa_=OQa_1jlRmHN[S2
+R2
+Z25 w1523415728
+Z26 8historia4.vwf.vt
+Z27 Fhistoria4.vwf.vt
+L0 61
+R6
+r1
+!s85 0
+31
+Z28 !s108 1523415732.866000
+Z29 !s107 historia4.vwf.vt|
+Z30 !s90 -work|work|historia4.vwf.vt|
+!s101 -O0
+R5
+vhistoria4_vlg_sample_tst
+!i10b 1
+!s100 I2kATlKGoKli0;CgYWOXj0
+IC3gTid4XS6@=[1K=m4WYW3
+V5T9Jnh2RLh0BhlPPZY4kl2
+R2
+R25
+R26
+R27
+L0 29
+R6
+r1
+!s85 0
+31
+R28
+R29
+R30
+!s101 -O0
+R5
+vhistoria4_vlg_vec_tst
+!i10b 1
+!s100 ];z84ZGi1bjimN;eA<K4V0
+I_Y?A3MK<[d;maN6lTgElF0
+VMhlh]8U`BK]TeRYI71QWZ1
+R2
+R25
+R26
+R27
+L0 210
+R6
+r1
+!s85 0
+31
+R28
+R29
+R30
+!s101 -O0
+R5
 Eligadesliga
-Z25 w1523153044
-Z26 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z27 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z31 w1523153044
+Z32 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z33 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 R3
-Z28 8D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
-Z29 FD:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
+Z34 8D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
+Z35 FD:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd
 l0
 L4
 V`nW_:Y=0]=lV:M?mVUi]51
-Z30 OV;C;10.1d;51
+Z36 OV;C;10.1d;51
 31
-Z31 !s108 1523199273.020000
-Z32 !s90 -reportprogress|300|-93|-work|work|D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
-Z33 !s107 D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
-Z34 o-93 -work work -O0
-Z35 tExplicit 1
+Z37 !s108 1523199273.020000
+Z38 !s90 -reportprogress|300|-93|-work|work|D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
+Z39 !s107 D:/guilherme/QuartusProjects/ligadesliga/ligadesliga.vhd|
+Z40 o-93 -work work -O0
+Z41 tExplicit 1
 !s100 ahhoG1MT6l8DUdY72J5;F0
 !i10b 1
 Alogica
-R26
-R27
+R32
+R33
 DEx4 work 11 ligadesliga 0 22 `nW_:Y=0]=lV:M?mVUi]51
 l24
 L12
 VLeGQdn6Vb;LQ1K4gO31=H2
-R30
+R36
 31
-R31
-R32
-R33
-R34
-R35
+R37
+R38
+R39
+R40
+R41
 !s100 7Y[4U:7XcfQ;bTPFbgg_C3
 !i10b 1

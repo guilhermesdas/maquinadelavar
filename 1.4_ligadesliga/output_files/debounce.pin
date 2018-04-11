@@ -85,8 +85,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
 GND+                         : A9        :        :                   :         : 7         :                
 GND+                         : A10       :        :                   :         : 7         :                
-result                       : A11       : output : 2.5 V             :         : 7         : N              
-button                       : A12       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
 GND                          : B1        : gnd    :                   :         :           :                
 GND                          : B2        : gnd    :                   :         :           :                
@@ -139,7 +139,7 @@ GND                          : E9        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 6         :                
 VCCIO6                       : E11       : power  :                   : 2.5V    : 6         :                
 GND                          : E12       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 6         :                
+result                       : E13       : output : 2.5 V             :         : 6         : N              
 GND                          : F1        : gnd    :                   :         :           :                
 GND                          : F2        : gnd    :                   :         :           :                
 VCCL_GXB                     : F3        : power  :                   : 1.2V    :           :                
@@ -148,7 +148,7 @@ VCCINT                       : F5        : power  :                   : 1.2V    
 GND                          : F6        : gnd    :                   :         :           :                
 VCCINT                       : F7        : power  :                   : 1.2V    :           :                
 GND                          : F8        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 6         :                
+button                       : F9        : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F10       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F11       :        :                   :         : 6         :                
 GND+                         : F12       :        :                   :         : 6         :                
@@ -185,7 +185,7 @@ VCCA_GXB                     : J3        : power  :                   : 2.5V    
 VCCD_PLL                     : J4        : power  :                   : 1.2V    :           :                
 CONF_DONE                    : J5        :        :                   :         : 3         :                
 GXB_GND*                     : J6        :        :                   :         : 3A        :                
-clk                          : J7        : input  : 2.5 V             :         : 3A        : N              
+clock                        : J7        : input  : 2.5 V             :         : 3A        : N              
 VCCINT                       : J8        : power  :                   : 1.2V    :           :                
 GND                          : J9        : gnd    :                   :         :           :                
 VCCD_PLL                     : J10       : power  :                   : 1.2V    :           :                

@@ -1,0 +1,36 @@
+|historia4
+Standby <= ligadesliga:inst1.Standby
+clk_153khz => ligadesliga:inst1.clock
+clk_1khz => debounce:inst.button
+botao => debounce:inst.clock
+off <= ligadesliga:inst1.off
+rst <= ligadesliga:inst1.rst
+
+
+|historia4|ligadesliga:inst1
+clock => est~5.DATAIN
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+botao => est.OUTPUTSELECT
+Standby <= Standby.DB_MAX_OUTPUT_PORT_TYPE
+off <= off.DB_MAX_OUTPUT_PORT_TYPE
+rst <= rst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|historia4|debounce:inst
+button => OP1.DATAIN
+clock => OP3.CLK
+clock => OP2.CLK
+clock => OP1.CLK
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
