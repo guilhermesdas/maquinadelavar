@@ -1,8 +1,8 @@
 |historia4
 Standby <= ligadesliga:inst1.Standby
 clk_153khz => ligadesliga:inst1.clock
-clk_1khz => debounce:inst.button
-botao => debounce:inst.clock
+botao => debounce:inst.button
+clk_1khz => debounce:inst.clock
 off <= ligadesliga:inst1.off
 rst <= ligadesliga:inst1.rst
 

@@ -6,7 +6,7 @@ Type  : Slow 1200mV 85C Model Setup 'clk_153khz'
 Slack : -1.203
 TNS   : -3.831
 
-Type  : Slow 1200mV 85C Model Setup 'botao'
+Type  : Slow 1200mV 85C Model Setup 'clk_1khz'
 Slack : 0.079
 TNS   : 0.000
 
@@ -14,7 +14,7 @@ Type  : Slow 1200mV 85C Model Hold 'clk_153khz'
 Slack : 0.356
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'botao'
+Type  : Slow 1200mV 85C Model Hold 'clk_1khz'
 Slack : 0.396
 TNS   : 0.000
 
@@ -22,7 +22,7 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_153khz'
 Slack : -3.000
 TNS   : -7.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'botao'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_1khz'
 Slack : -3.000
 TNS   : -6.000
 
@@ -30,7 +30,7 @@ Type  : Slow 1200mV 0C Model Setup 'clk_153khz'
 Slack : -0.985
 TNS   : -3.025
 
-Type  : Slow 1200mV 0C Model Setup 'botao'
+Type  : Slow 1200mV 0C Model Setup 'clk_1khz'
 Slack : 0.182
 TNS   : 0.000
 
@@ -38,7 +38,7 @@ Type  : Slow 1200mV 0C Model Hold 'clk_153khz'
 Slack : 0.309
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'botao'
+Type  : Slow 1200mV 0C Model Hold 'clk_1khz'
 Slack : 0.359
 TNS   : 0.000
 
@@ -46,7 +46,7 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_153khz'
 Slack : -3.000
 TNS   : -7.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'botao'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_1khz'
 Slack : -3.000
 TNS   : -6.000
 
@@ -54,7 +54,7 @@ Type  : Fast 1200mV 0C Model Setup 'clk_153khz'
 Slack : -0.227
 TNS   : -0.454
 
-Type  : Fast 1200mV 0C Model Setup 'botao'
+Type  : Fast 1200mV 0C Model Setup 'clk_1khz'
 Slack : 0.480
 TNS   : 0.000
 
@@ -62,7 +62,7 @@ Type  : Fast 1200mV 0C Model Hold 'clk_153khz'
 Slack : 0.186
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'botao'
+Type  : Fast 1200mV 0C Model Hold 'clk_1khz'
 Slack : 0.207
 TNS   : 0.000
 
@@ -70,7 +70,7 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_153khz'
 Slack : -3.000
 TNS   : -7.106
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'botao'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_1khz'
 Slack : -3.000
 TNS   : -6.078
 

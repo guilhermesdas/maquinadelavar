@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
--- CREATED		"Tue Apr 10 22:45:45 2018"
+-- CREATED		"Wed Apr 11 02:33:03 2018"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -59,8 +59,8 @@ BEGIN
 
 
 b2v_inst : debounce
-PORT MAP(button => clk_1khz,
-		 clock => botao,
+PORT MAP(button => botao,
+		 clock => clk_1khz,
 		 result => SYNTHESIZED_WIRE_0);
 
 

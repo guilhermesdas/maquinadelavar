@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "04/10/2018 21:40:40"
+// DATE "04/11/2018 02:53:36"
 
 // 
 // Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -195,9 +195,9 @@ wire \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT ;
 wire \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8~0_combout ;
 wire \inst3|LPM_COUNTER_component|auto_generated|cout_actual~combout ;
 wire [8:0] \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
+wire [1:0] \inst2|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
 wire [8:0] \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
 wire [7:0] \inst1|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
-wire [1:0] \inst2|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
 
 
 // Location: IOOBUF_X33_Y22_N9

@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "04/10/2018 23:02:11"
+// DATE "04/11/2018 02:40:08"
 
 // 
 // Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -31,14 +31,14 @@
 module historia4 (
 	Standby,
 	clk_153khz,
-	clk_1khz,
 	botao,
+	clk_1khz,
 	off,
 	rst);
 output 	Standby;
 input 	clk_153khz;
-input 	clk_1khz;
 input 	botao;
+input 	clk_1khz;
 output 	off;
 output 	rst;
 
@@ -47,8 +47,8 @@ output 	rst;
 // off	=>  Location: PIN_L9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // rst	=>  Location: PIN_K9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clk_153khz	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// botao	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// clk_1khz	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk_1khz	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// botao	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -67,9 +67,9 @@ wire \off~output_o ;
 wire \rst~output_o ;
 wire \clk_153khz~input_o ;
 wire \clk_153khz~inputclkctrl_outclk ;
-wire \botao~input_o ;
-wire \botao~inputclkctrl_outclk ;
 wire \clk_1khz~input_o ;
+wire \clk_1khz~inputclkctrl_outclk ;
+wire \botao~input_o ;
 wire \inst|OP1~feeder_combout ;
 wire \inst|OP1~q ;
 wire \inst|OP2~feeder_combout ;
@@ -153,29 +153,6 @@ defparam \clk_153khz~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
 // Location: IOIBUF_X16_Y0_N22
-cycloneiv_io_ibuf \botao~input (
-	.i(botao),
-	.ibar(gnd),
-	.o(\botao~input_o ));
-// synopsys translate_off
-defparam \botao~input .bus_hold = "false";
-defparam \botao~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: CLKCTRL_G19
-cycloneiv_clkctrl \botao~inputclkctrl (
-	.ena(vcc),
-	.inclk({vcc,vcc,vcc,\botao~input_o }),
-	.clkselect(2'b00),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.outclk(\botao~inputclkctrl_outclk ));
-// synopsys translate_off
-defparam \botao~inputclkctrl .clock_type = "global clock";
-defparam \botao~inputclkctrl .ena_register_mode = "none";
-// synopsys translate_on
-
-// Location: IOIBUF_X22_Y0_N8
 cycloneiv_io_ibuf \clk_1khz~input (
 	.i(clk_1khz),
 	.ibar(gnd),
@@ -185,15 +162,38 @@ defparam \clk_1khz~input .bus_hold = "false";
 defparam \clk_1khz~input .simulate_z_as = "z";
 // synopsys translate_on
 
+// Location: CLKCTRL_G19
+cycloneiv_clkctrl \clk_1khz~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\clk_1khz~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\clk_1khz~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \clk_1khz~inputclkctrl .clock_type = "global clock";
+defparam \clk_1khz~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: IOIBUF_X22_Y0_N8
+cycloneiv_io_ibuf \botao~input (
+	.i(botao),
+	.ibar(gnd),
+	.o(\botao~input_o ));
+// synopsys translate_off
+defparam \botao~input .bus_hold = "false";
+defparam \botao~input .simulate_z_as = "z";
+// synopsys translate_on
+
 // Location: LCCOMB_X22_Y1_N30
 cycloneiv_lcell_comb \inst|OP1~feeder (
 // Equation(s):
-// \inst|OP1~feeder_combout  = \clk_1khz~input_o 
+// \inst|OP1~feeder_combout  = \botao~input_o 
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(\clk_1khz~input_o ),
+	.datad(\botao~input_o ),
 	.cin(gnd),
 	.combout(\inst|OP1~feeder_combout ),
 	.cout());
@@ -204,7 +204,7 @@ defparam \inst|OP1~feeder .sum_lutc_input = "datac";
 
 // Location: FF_X22_Y1_N31
 dffeas \inst|OP1 (
-	.clk(\botao~inputclkctrl_outclk ),
+	.clk(\clk_1khz~inputclkctrl_outclk ),
 	.d(\inst|OP1~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -240,7 +240,7 @@ defparam \inst|OP2~feeder .sum_lutc_input = "datac";
 
 // Location: FF_X22_Y1_N21
 dffeas \inst|OP2 (
-	.clk(\botao~inputclkctrl_outclk ),
+	.clk(\clk_1khz~inputclkctrl_outclk ),
 	.d(\inst|OP2~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -276,7 +276,7 @@ defparam \inst|OP3~feeder .sum_lutc_input = "datac";
 
 // Location: FF_X22_Y1_N15
 dffeas \inst|OP3 (
-	.clk(\botao~inputclkctrl_outclk ),
+	.clk(\clk_1khz~inputclkctrl_outclk ),
 	.d(\inst|OP3~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),

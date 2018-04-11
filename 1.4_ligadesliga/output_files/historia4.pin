@@ -184,7 +184,7 @@ GXB_GND*                     : J2        :        :                   :         
 VCCA_GXB                     : J3        : power  :                   : 2.5V    :           :                
 VCCD_PLL                     : J4        : power  :                   : 1.2V    :           :                
 CONF_DONE                    : J5        :        :                   :         : 3         :                
-botao                        : J6        : input  : 2.5 V             :         : 3A        : N              
+clk_1khz                     : J6        : input  : 2.5 V             :         : 3A        : N              
 clk_153khz                   : J7        : input  : 2.5 V             :         : 3A        : N              
 VCCINT                       : J8        : power  :                   : 1.2V    :           :                
 GND                          : J9        : gnd    :                   :         :           :                
@@ -199,7 +199,7 @@ VCCA                         : K4        : power  :                   : 2.5V    
 MSEL0                        : K5        :        :                   :         : 3         :                
 nSTATUS                      : K6        :        :                   :         : 3         :                
 VCC_CLKIN3A                  : K7        : power  :                   : 2.5V    : 3A        :                
-clk_1khz                     : K8        : input  : 2.5 V             :         : 4         : N              
+botao                        : K8        : input  : 2.5 V             :         : 4         : N              
 rst                          : K9        : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K10       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K11       :        :                   :         : 5         :                

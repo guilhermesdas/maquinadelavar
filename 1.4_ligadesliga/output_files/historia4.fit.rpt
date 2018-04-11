@@ -1,5 +1,5 @@
 Fitter report for historia4
-Tue Apr 10 22:47:08 2018
+Wed Apr 11 02:33:34 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Tue Apr 10 22:47:08 2018      ;
+; Fitter Status                      ; Successful - Wed Apr 11 02:33:34 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; historia4                                  ;
 ; Top-level Entity Name              ; historia4                                  ;
@@ -169,8 +169,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; off        ; Incomplete set of assignments ;
 ; rst        ; Incomplete set of assignments ;
 ; clk_153khz ; Incomplete set of assignments ;
-; botao      ; Incomplete set of assignments ;
 ; clk_1khz   ; Incomplete set of assignments ;
+; botao      ; Incomplete set of assignments ;
 +------------+-------------------------------+
 
 
@@ -345,9 +345,9 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
-; botao      ; J6    ; 3A       ; 16           ; 0            ; 21           ; 3                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; botao      ; K8    ; 4        ; 22           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 ; clk_153khz ; J7    ; 3A       ; 16           ; 0            ; 14           ; 4                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; clk_1khz   ; K8    ; 4        ; 22           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; clk_1khz   ; J6    ; 3A       ; 16           ; 0            ; 21           ; 3                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
@@ -514,7 +514,7 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; J3       ;            ; --       ; VCCA_GXB                                         ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J4       ;            ;          ; VCCD_PLL                                         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J5       ; 19         ; 3        ; ^CONF_DONE                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; J6       ; 29         ; 3A       ; botao                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; J6       ; 29         ; 3A       ; clk_1khz                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J7       ; 30         ; 3A       ; clk_153khz                                       ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J8       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J9       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -529,7 +529,7 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; K5       ; 18         ; 3        ; ^MSEL0                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K6       ; 20         ; 3        ; ^nSTATUS                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K7       ;            ; 3A       ; VCC_CLKIN3A                                      ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; K8       ; 35         ; 4        ; clk_1khz                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; K8       ; 35         ; 4        ; botao                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; K9       ; 36         ; 4        ; rst                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; K10      ; 43         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; K11      ; 48         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -599,8 +599,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; off        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; rst        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk_153khz ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; botao      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; clk_1khz   ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
+; clk_1khz   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; botao      ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -610,8 +610,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout             ; Pad To Core Index ; Setting ;
 +---------------------------------+-------------------+---------+
 ; clk_153khz                      ;                   ;         ;
-; botao                           ;                   ;         ;
 ; clk_1khz                        ;                   ;         ;
+; botao                           ;                   ;         ;
 ;      - debounce:inst|OP1~feeder ; 0                 ; 6       ;
 +---------------------------------+-------------------+---------+
 
@@ -621,8 +621,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                          ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; botao                         ; PIN_J6            ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 ; clk_153khz                    ; PIN_J7            ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; clk_1khz                      ; PIN_J6            ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 ; ligadesliga:inst1|Selector0~2 ; LCCOMB_X22_Y1_N26 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -632,8 +632,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name       ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; botao      ; PIN_J6   ; 3       ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 ; clk_153khz ; PIN_J7   ; 4       ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
+; clk_1khz   ; PIN_J6   ; 3       ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 +------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -652,7 +652,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ligadesliga:inst1|est.desligado ; 3       ;
 ; ligadesliga:inst1|Selector0~2   ; 2       ;
 ; ligadesliga:inst1|Standby       ; 2       ;
-; clk_1khz~input                  ; 1       ;
+; botao~input                     ; 1       ;
 ; ligadesliga:inst1|Selector1~2   ; 1       ;
 ; ligadesliga:inst1|Selector2~0   ; 1       ;
 ; ligadesliga:inst1|Selector0~1   ; 1       ;
@@ -829,8 +829,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; off                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; rst                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk_153khz         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; botao              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk_1khz           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; botao              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -914,8 +914,8 @@ Critical Warning (169085): No exact pin location assignment(s) for 6 pins of 6 t
     Info (169086): Pin off not assigned to an exact location on the device
     Info (169086): Pin rst not assigned to an exact location on the device
     Info (169086): Pin clk_153khz not assigned to an exact location on the device
-    Info (169086): Pin botao not assigned to an exact location on the device
     Info (169086): Pin clk_1khz not assigned to an exact location on the device
+    Info (169086): Pin botao not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'historia4.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -923,7 +923,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQue
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk_153khz~input (placed in PIN J7 (CLK13, DIFFCLK_7n, REFCLK0n))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G17
-Info (176353): Automatically promoted node botao~input (placed in PIN J6 (CLK12, DIFFCLK_7p, REFCLK0p))
+Info (176353): Automatically promoted node clk_1khz~input (placed in PIN J6 (CLK12, DIFFCLK_7p, REFCLK0p))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -955,21 +955,21 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.33 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169177): 2 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV GX Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin clk_153khz uses I/O standard 2.5 V at J7
-    Info (169178): Pin botao uses I/O standard 2.5 V at J6
+    Info (169178): Pin clk_1khz uses I/O standard 2.5 V at J6
 Info (144001): Generated suppressed messages file D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/output_files/historia4.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 808 megabytes
-    Info: Processing ended: Tue Apr 10 22:47:09 2018
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Processing ended: Wed Apr 11 02:33:35 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+

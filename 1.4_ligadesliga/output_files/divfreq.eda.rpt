@@ -1,5 +1,5 @@
 EDA Netlist Writer report for divfreq
-Tue Apr 10 21:40:40 2018
+Wed Apr 11 02:53:36 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Apr 10 21:40:40 2018 ;
+; EDA Netlist Writer Status ; Successful - Wed Apr 11 02:53:36 2018 ;
 ; Revision Name             ; divfreq                               ;
 ; Top-level Entity Name     ; divfreq                               ;
 ; Family                    ; Cyclone IV GX                         ;
@@ -80,12 +80,25 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Apr 10 21:40:38 2018
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off divfreq -c divfreq
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Wed Apr 11 02:53:34 2018
+Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/simulation/qsim/ divfreq -c divfreq
 Info (204019): Generated file divfreq.vo in folder "D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 458 megabytes
-    Info: Processing ended: Tue Apr 10 21:40:40 2018
+    Info: Processing ended: Wed Apr 11 02:53:36 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
