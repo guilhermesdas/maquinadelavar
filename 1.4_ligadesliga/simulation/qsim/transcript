@@ -21,8 +21,8 @@
 # Loading cycloneiv_ver.cycloneiv_clkctrl
 # Loading cycloneiv_ver.cycloneiv_mux41
 # Loading cycloneiv_ver.cycloneiv_ena_reg
-# Loading cycloneiv_ver.cycloneiv_lcell_comb
 # Loading altera_ver.dffeas
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
 # Loading work.historia4_vlg_sample_tst
 # Loading work.historia4_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW

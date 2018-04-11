@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
--- CREATED		"Wed Apr 11 02:33:03 2018"
+-- CREATED		"Wed Apr 11 17:25:52 2018"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -51,7 +51,17 @@ COMPONENT ligadesliga
 	);
 END COMPONENT;
 
+COMPONENT fast_to_slow_arc
+GENERIC (DIVFACTOR : INTEGER
+			);
+	PORT(fast : IN STD_LOGIC;
+		 clk : IN STD_LOGIC;
+		 slow : OUT STD_LOGIC
+	);
+END COMPONENT;
+
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
 
 
 BEGIN 
@@ -69,7 +79,15 @@ PORT MAP(clock => clk_153khz,
 		 botao => SYNTHESIZED_WIRE_0,
 		 Standby => Standby,
 		 off => off,
-		 rst => rst);
+		 rst => SYNTHESIZED_WIRE_1);
+
+
+b2v_inst5 : fast_to_slow_arc
+GENERIC MAP(DIVFACTOR => 153000
+			)
+PORT MAP(fast => SYNTHESIZED_WIRE_1,
+		 clk => clk_153khz,
+		 slow => rst);
 
 
 END bdf_type;
