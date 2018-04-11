@@ -1,0 +1,202 @@
+|historia2
+onTE <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+rst => lpm_counter0:inst2.sclr
+rst => lpm_counter0:inst.sclr
+wrTE => lpm_counter0:inst2.sload
+wrTE => lpm_counter0:inst.sload
+clk_1hz => lpm_counter0:inst2.clock
+clk_1hz => lpm_counter0:inst.clock
+enTE => lpm_counter0:inst2.cnt_en
+enTE => lpm_counter0:inst.cnt_en
+cin => lpm_counter0:inst.cin
+dtRL1[0] => lpm_counter0:inst.data[0]
+dtRL1[1] => lpm_counter0:inst.data[1]
+dtRL1[2] => lpm_counter0:inst.data[2]
+dtRL1[3] => lpm_counter0:inst.data[3]
+dtRL2[0] => lpm_counter0:inst2.data[0]
+dtRL2[1] => lpm_counter0:inst2.data[1]
+dtRL2[2] => lpm_counter0:inst2.data[2]
+dtRL2[3] => lpm_counter0:inst2.data[3]
+endTE <= lpm_counter0:inst2.cout
+dtTE1[0] <= lpm_counter0:inst.q[0]
+dtTE1[1] <= lpm_counter0:inst.q[1]
+dtTE1[2] <= lpm_counter0:inst.q[2]
+dtTE1[3] <= lpm_counter0:inst.q[3]
+dtTE2[0] <= lpm_counter0:inst2.q[0]
+dtTE2[1] <= lpm_counter0:inst2.q[1]
+dtTE2[2] <= lpm_counter0:inst2.q[2]
+dtTE2[3] <= lpm_counter0:inst2.q[3]
+
+
+|historia2|lpm_counter0:inst2
+cin => lpm_counter:LPM_COUNTER_component.cin
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+data[0] => lpm_counter:LPM_COUNTER_component.data[0]
+data[1] => lpm_counter:LPM_COUNTER_component.data[1]
+data[2] => lpm_counter:LPM_COUNTER_component.data[2]
+data[3] => lpm_counter:LPM_COUNTER_component.data[3]
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+sload => lpm_counter:LPM_COUNTER_component.sload
+cout <= lpm_counter:LPM_COUNTER_component.cout
+q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
+q[1] <= lpm_counter:LPM_COUNTER_component.q[1]
+q[2] <= lpm_counter:LPM_COUNTER_component.q[2]
+q[3] <= lpm_counter:LPM_COUNTER_component.q[3]
+
+
+|historia2|lpm_counter0:inst2|lpm_counter:LPM_COUNTER_component
+clock => cntr_jbm:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_jbm:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_jbm:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => cntr_jbm:auto_generated.sload
+data[0] => cntr_jbm:auto_generated.data[0]
+data[1] => cntr_jbm:auto_generated.data[1]
+data[2] => cntr_jbm:auto_generated.data[2]
+data[3] => cntr_jbm:auto_generated.data[3]
+cin => cntr_jbm:auto_generated.cin
+q[0] <= cntr_jbm:auto_generated.q[0]
+q[1] <= cntr_jbm:auto_generated.q[1]
+q[2] <= cntr_jbm:auto_generated.q[2]
+q[3] <= cntr_jbm:auto_generated.q[3]
+cout <= cntr_jbm:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|historia2|lpm_counter0:inst2|lpm_counter:LPM_COUNTER_component|cntr_jbm:auto_generated
+cin => counter_comb_bita0.CIN
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN1
+sload => _.IN1
+
+
+|historia2|lpm_counter0:inst
+cin => lpm_counter:LPM_COUNTER_component.cin
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+data[0] => lpm_counter:LPM_COUNTER_component.data[0]
+data[1] => lpm_counter:LPM_COUNTER_component.data[1]
+data[2] => lpm_counter:LPM_COUNTER_component.data[2]
+data[3] => lpm_counter:LPM_COUNTER_component.data[3]
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+sload => lpm_counter:LPM_COUNTER_component.sload
+cout <= lpm_counter:LPM_COUNTER_component.cout
+q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
+q[1] <= lpm_counter:LPM_COUNTER_component.q[1]
+q[2] <= lpm_counter:LPM_COUNTER_component.q[2]
+q[3] <= lpm_counter:LPM_COUNTER_component.q[3]
+
+
+|historia2|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component
+clock => cntr_jbm:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_jbm:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_jbm:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => cntr_jbm:auto_generated.sload
+data[0] => cntr_jbm:auto_generated.data[0]
+data[1] => cntr_jbm:auto_generated.data[1]
+data[2] => cntr_jbm:auto_generated.data[2]
+data[3] => cntr_jbm:auto_generated.data[3]
+cin => cntr_jbm:auto_generated.cin
+q[0] <= cntr_jbm:auto_generated.q[0]
+q[1] <= cntr_jbm:auto_generated.q[1]
+q[2] <= cntr_jbm:auto_generated.q[2]
+q[3] <= cntr_jbm:auto_generated.q[3]
+cout <= cntr_jbm:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|historia2|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_jbm:auto_generated
+cin => counter_comb_bita0.CIN
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN0
+sload => _.IN1
+sload => _.IN1
+
+
