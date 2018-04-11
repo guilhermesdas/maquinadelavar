@@ -4,7 +4,7 @@ USE ieee.std_logic_unsigned.all;
 
 ENTITY debounce IS
   --GENERIC(
-  --  counter_size  :  INTEGER := 19); --Tamanho do Contador (19 bits duram cerca de 10.5ms em 50MHz de clock)
+  --  counter_size  :  INTEGER := 1); --Tamanho do Contador (19 bits duram cerca de 10.5ms em 50MHz de clock)
   PORT(
     clk     : IN  STD_LOGIC; 
     button  : IN  STD_LOGIC;  --Sinal de entrada do botão

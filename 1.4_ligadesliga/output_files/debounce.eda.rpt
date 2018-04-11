@@ -1,5 +1,5 @@
 EDA Netlist Writer report for debounce
-Tue Apr 10 02:32:27 2018
+Tue Apr 10 21:59:45 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Apr 10 02:32:27 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 10 21:59:45 2018 ;
 ; Revision Name             ; debounce                              ;
 ; Top-level Entity Name     ; debounce                              ;
 ; Family                    ; Cyclone IV GX                         ;
@@ -93,12 +93,12 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Tue Apr 10 02:32:26 2018
+    Info: Processing started: Tue Apr 10 21:59:44 2018
 Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/simulation/qsim/ debounce -c debounce
 Info (204019): Generated file debounce.vo in folder "D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 458 megabytes
-    Info: Processing ended: Tue Apr 10 02:32:27 2018
+    Info: Processing ended: Tue Apr 10 21:59:45 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

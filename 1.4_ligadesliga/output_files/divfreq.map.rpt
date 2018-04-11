@@ -1,6 +1,6 @@
 Analysis & Synthesis report for divfreq
-Tue Apr 10 13:12:56 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Apr 10 21:39:58 2018
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -44,28 +44,28 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 10 13:12:56 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; divfreq                                         ;
-; Top-level Entity Name              ; divfreq                                         ;
-; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 47                                              ;
-;     Total combinational functions  ; 47                                              ;
-;     Dedicated logic registers      ; 27                                              ;
-; Total registers                    ; 27                                              ;
-; Total pins                         ; 31                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total GXB Receiver Channel PCS     ; 0                                               ;
-; Total GXB Receiver Channel PMA     ; 0                                               ;
-; Total GXB Transmitter Channel PCS  ; 0                                               ;
-; Total GXB Transmitter Channel PMA  ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Apr 10 21:39:58 2018      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; divfreq                                    ;
+; Top-level Entity Name              ; divfreq                                    ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 47                                         ;
+;     Total combinational functions  ; 47                                         ;
+;     Dedicated logic registers      ; 27                                         ;
+; Total registers                    ; 27                                         ;
+; Total pins                         ; 31                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -165,34 +165,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
-; divfreq.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/divfreq.bdf      ;         ;
-; lpm_counter1.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter1.vhd ;         ;
-; lpm_counter2.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter2.vhd ;         ;
-; lpm_counter3.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter3.vhd ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf              ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                 ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                   ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc               ;         ;
-; db/cntr_u0k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_u0k.tdf  ;         ;
-; db/cmpr_pkc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/db/cmpr_pkc.tdf  ;         ;
-; db/cntr_n0k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_n0k.tdf  ;         ;
-; db/cmpr_ikc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/db/cmpr_ikc.tdf  ;         ;
-; db/cntr_c2k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_c2k.tdf  ;         ;
-; db/cmpr_okc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/db/cmpr_okc.tdf  ;         ;
-; lpm_counter0.vhd                 ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter0.vhd ;         ;
-; db/cntr_d2k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_d2k.tdf  ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; divfreq.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/divfreq.bdf         ;         ;
+; lpm_counter1.vhd                 ; yes             ; User Wizard-Generated File         ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter1.vhd    ;         ;
+; lpm_counter2.vhd                 ; yes             ; User Wizard-Generated File         ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter2.vhd    ;         ;
+; lpm_counter3.vhd                 ; yes             ; User Wizard-Generated File         ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter3.vhd    ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc          ;         ;
+; db/cntr_14k.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_14k.tdf     ;         ;
+; db/cmpr_pkc.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/db/cmpr_pkc.tdf     ;         ;
+; db/cntr_n0k.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_n0k.tdf     ;         ;
+; db/cmpr_ikc.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/db/cmpr_ikc.tdf     ;         ;
+; db/cntr_44k.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_44k.tdf     ;         ;
+; db/cmpr_okc.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/db/cmpr_okc.tdf     ;         ;
+; lpm_counter0.vhd                 ; yes             ; Auto-Found Wizard-Generated File   ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter0.vhd    ;         ;
+; db/cntr_64k.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/db/cntr_64k.tdf     ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -217,30 +217,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; |divfreq                                  ; 47 (1)            ; 27 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 31   ; 0            ; |divfreq                                                                              ; work         ;
 ;    |lpm_counter0:inst|                    ; 15 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter0:inst                                                            ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component| ; 15 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component                          ; work         ;
-;          |cntr_d2k:auto_generated|        ; 15 (15)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_d2k:auto_generated  ; work         ;
+;          |cntr_64k:auto_generated|        ; 15 (15)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_64k:auto_generated  ; work         ;
 ;    |lpm_counter1:inst1|                   ; 13 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter1:inst1                                                           ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component| ; 13 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component                         ; work         ;
-;          |cntr_c2k:auto_generated|        ; 13 (13)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_c2k:auto_generated ; work         ;
+;          |cntr_44k:auto_generated|        ; 13 (13)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_44k:auto_generated ; work         ;
 ;    |lpm_counter2:inst2|                   ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter2:inst2                                                           ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component| ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter2:inst2|lpm_counter:LPM_COUNTER_component                         ; work         ;
 ;          |cntr_n0k:auto_generated|        ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter2:inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated ; work         ;
 ;    |lpm_counter3:inst3|                   ; 15 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter3:inst3                                                           ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component| ; 15 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component                         ; work         ;
-;          |cntr_u0k:auto_generated|        ; 15 (15)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated ; work         ;
+;          |cntr_14k:auto_generated|        ; 15 (15)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_14k:auto_generated ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                        ;
-+--------+--------------+---------+--------------+--------------+-----------------------------+--------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance             ; IP Include File                                                                ;
-+--------+--------------+---------+--------------+--------------+-----------------------------+--------------------------------------------------------------------------------+
-; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |divfreq|lpm_counter0:inst  ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter0.vhd ;
-; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |divfreq|lpm_counter1:inst1 ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter1.vhd ;
-; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |divfreq|lpm_counter2:inst2 ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter2.vhd ;
-; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |divfreq|lpm_counter3:inst3 ; C:/Users/grcm/Documents/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter3.vhd ;
-+--------+--------------+---------+--------------+--------------+-----------------------------+--------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                             ;
++--------+--------------+---------+--------------+--------------+-----------------------------+---------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance             ; IP Include File                                                     ;
++--------+--------------+---------+--------------+--------------+-----------------------------+---------------------------------------------------------------------+
+; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |divfreq|lpm_counter0:inst  ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter0.vhd ;
+; Altera ; LPM_COUNTER  ; 13.1    ; N/A          ; N/A          ; |divfreq|lpm_counter1:inst1 ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter1.vhd ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |divfreq|lpm_counter2:inst2 ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter2.vhd ;
+; Altera ; LPM_COUNTER  ; 13.1    ; N/A          ; N/A          ; |divfreq|lpm_counter3:inst3 ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/lpm_counter3.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------------+---------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -279,7 +279,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                           ;
 ; LPM_WIDTH              ; 9             ; Signed Integer                                           ;
 ; LPM_DIRECTION          ; UP            ; Untyped                                                  ;
-; LPM_MODULUS            ; 2             ; Signed Integer                                           ;
+; LPM_MODULUS            ; 500           ; Signed Integer                                           ;
 ; LPM_AVALUE             ; UNUSED        ; Untyped                                                  ;
 ; LPM_SVALUE             ; UNUSED        ; Untyped                                                  ;
 ; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                  ;
@@ -290,7 +290,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CARRY_CNT_EN           ; SMART         ; Untyped                                                  ;
 ; LABWIDE_SCLR           ; ON            ; Untyped                                                  ;
 ; USE_NEW_VERSION        ; TRUE          ; Untyped                                                  ;
-; CBXI_PARAMETER         ; cntr_u0k      ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_14k      ; Untyped                                                  ;
 +------------------------+---------------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -333,7 +333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                           ;
 ; LPM_WIDTH              ; 8             ; Signed Integer                                           ;
 ; LPM_DIRECTION          ; UP            ; Untyped                                                  ;
-; LPM_MODULUS            ; 10            ; Signed Integer                                           ;
+; LPM_MODULUS            ; 153           ; Signed Integer                                           ;
 ; LPM_AVALUE             ; UNUSED        ; Untyped                                                  ;
 ; LPM_SVALUE             ; UNUSED        ; Untyped                                                  ;
 ; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                  ;
@@ -344,7 +344,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CARRY_CNT_EN           ; SMART         ; Untyped                                                  ;
 ; LABWIDE_SCLR           ; ON            ; Untyped                                                  ;
 ; USE_NEW_VERSION        ; TRUE          ; Untyped                                                  ;
-; CBXI_PARAMETER         ; cntr_c2k      ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_44k      ; Untyped                                                  ;
 +------------------------+---------------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -360,7 +360,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                          ;
 ; LPM_WIDTH              ; 9             ; Signed Integer                                          ;
 ; LPM_DIRECTION          ; UP            ; Untyped                                                 ;
-; LPM_MODULUS            ; 10            ; Signed Integer                                          ;
+; LPM_MODULUS            ; 325           ; Signed Integer                                          ;
 ; LPM_AVALUE             ; UNUSED        ; Untyped                                                 ;
 ; LPM_SVALUE             ; UNUSED        ; Untyped                                                 ;
 ; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                 ;
@@ -371,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CARRY_CNT_EN           ; SMART         ; Untyped                                                 ;
 ; LABWIDE_SCLR           ; ON            ; Untyped                                                 ;
 ; USE_NEW_VERSION        ; TRUE          ; Untyped                                                 ;
-; CBXI_PARAMETER         ; cntr_d2k      ; Untyped                                                 ;
+; CBXI_PARAMETER         ; cntr_64k      ; Untyped                                                 ;
 +------------------------+---------------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -381,7 +381,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -390,8 +390,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 10 13:12:53 2018
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Apr 10 21:39:50 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off divfreq -c divfreq
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file divfreq.bdf
@@ -411,16 +411,16 @@ Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter3:inst3
 Info (12130): Elaborated megafunction instantiation "lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component"
 Info (12133): Instantiated megafunction "lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
-    Info (12134): Parameter "lpm_modulus" = "2"
+    Info (12134): Parameter "lpm_modulus" = "500"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
     Info (12134): Parameter "lpm_width" = "9"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_u0k.tdf
-    Info (12023): Found entity 1: cntr_u0k
-Info (12128): Elaborating entity "cntr_u0k" for hierarchy "lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_14k.tdf
+    Info (12023): Found entity 1: cntr_14k
+Info (12128): Elaborating entity "cntr_14k" for hierarchy "lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_14k:auto_generated"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_pkc.tdf
     Info (12023): Found entity 1: cmpr_pkc
-Info (12128): Elaborating entity "cmpr_pkc" for hierarchy "lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|cmpr_pkc:cmpr1"
+Info (12128): Elaborating entity "cmpr_pkc" for hierarchy "lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_14k:auto_generated|cmpr_pkc:cmpr1"
 Info (12128): Elaborating entity "lpm_counter2" for hierarchy "lpm_counter2:inst2"
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter2:inst2|lpm_counter:LPM_COUNTER_component"
 Info (12130): Elaborated megafunction instantiation "lpm_counter2:inst2|lpm_counter:LPM_COUNTER_component"
@@ -441,16 +441,16 @@ Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter1:inst1
 Info (12130): Elaborated megafunction instantiation "lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component"
 Info (12133): Instantiated megafunction "lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
-    Info (12134): Parameter "lpm_modulus" = "10"
+    Info (12134): Parameter "lpm_modulus" = "153"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
     Info (12134): Parameter "lpm_width" = "8"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_c2k.tdf
-    Info (12023): Found entity 1: cntr_c2k
-Info (12128): Elaborating entity "cntr_c2k" for hierarchy "lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_c2k:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_44k.tdf
+    Info (12023): Found entity 1: cntr_44k
+Info (12128): Elaborating entity "cntr_44k" for hierarchy "lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_44k:auto_generated"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_okc.tdf
     Info (12023): Found entity 1: cmpr_okc
-Info (12128): Elaborating entity "cmpr_okc" for hierarchy "lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_c2k:auto_generated|cmpr_okc:cmpr1"
+Info (12128): Elaborating entity "cmpr_okc" for hierarchy "lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_44k:auto_generated|cmpr_okc:cmpr1"
 Warning (12125): Using design file lpm_counter0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: lpm_counter0-SYN
     Info (12023): Found entity 1: lpm_counter0
@@ -459,13 +459,13 @@ Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst|
 Info (12130): Elaborated megafunction instantiation "lpm_counter0:inst|lpm_counter:LPM_COUNTER_component"
 Info (12133): Instantiated megafunction "lpm_counter0:inst|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
-    Info (12134): Parameter "lpm_modulus" = "10"
+    Info (12134): Parameter "lpm_modulus" = "325"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
     Info (12134): Parameter "lpm_width" = "9"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_d2k.tdf
-    Info (12023): Found entity 1: cntr_d2k
-Info (12128): Elaborating entity "cntr_d2k" for hierarchy "lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_d2k:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_64k.tdf
+    Info (12023): Found entity 1: cntr_64k
+Info (12128): Elaborating entity "cntr_64k" for hierarchy "lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_64k:auto_generated"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "q500hz[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
@@ -476,9 +476,9 @@ Info (21057): Implemented 78 device resources after synthesis - the final resour
     Info (21059): Implemented 29 output pins
     Info (21061): Implemented 47 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 563 megabytes
-    Info: Processing ended: Tue Apr 10 13:12:56 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 587 megabytes
+    Info: Processing ended: Tue Apr 10 21:39:58 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

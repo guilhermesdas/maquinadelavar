@@ -7,13 +7,9 @@
 # Top level modules:
 # 	debounce
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-<<<<<<< HEAD
-# -- Compiling module contador_divfreq_vlg_vec_tst
-=======
 # -- Compiling module debounce_vlg_sample_tst
 # -- Compiling module debounce_vlg_check_tst
 # -- Compiling module debounce_vlg_vec_tst
->>>>>>> c9d39e56ec6b5776ff24e7033595ff2e732add2a
 # 
 # Top level modules:
 # 	debounce_vlg_vec_tst
@@ -27,15 +23,9 @@
 # Loading cycloneiv_ver.cycloneiv_ena_reg
 # Loading cycloneiv_ver.cycloneiv_lcell_comb
 # Loading altera_ver.dffeas
-<<<<<<< HEAD
-# Loading altera_ver.PRIM_GDFF_LOW
-# ** Note: $finish    : contador_divfreq.vt(48)
-#    Time: 1 us  Iteration: 0  Instance: /contador_divfreq_vlg_vec_tst
-=======
 # Loading work.debounce_vlg_sample_tst
 # Loading work.debounce_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
 # ** Note: $finish    : debounce.vwf.vt(150)
 #    Time: 1 us  Iteration: 0  Instance: /debounce_vlg_vec_tst/tb_out
->>>>>>> c9d39e56ec6b5776ff24e7033595ff2e732add2a
