@@ -3,6 +3,6 @@ button => OP1.DATAIN
 clock => OP3.CLK
 clock => OP2.CLK
 clock => OP1.CLK
-result <= result.DB_MAX_OUTPUT_PORT_TYPE
+result << result.DB_MAX_OUTPUT_PORT_TYPE
 
 

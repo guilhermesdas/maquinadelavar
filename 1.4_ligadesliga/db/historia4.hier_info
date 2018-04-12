@@ -1,11 +1,10 @@
 |historia4
 Standby <= ligadesliga:inst1.Standby
 clk_153khz => ligadesliga:inst1.clock
-clk_153khz => fast_to_slow_arc:inst5.clk
 botao => debounce:inst.button
 clk_1khz => debounce:inst.clock
 off <= ligadesliga:inst1.off
-rst <= fast_to_slow_arc:inst5.slow
+rst <= <GND>
 
 
 |historia4|ligadesliga:inst1
@@ -33,53 +32,5 @@ clock => OP3.CLK
 clock => OP2.CLK
 clock => OP1.CLK
 result <= result.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|historia4|fast_to_slow_arc:inst5
-fast => Monoestavel:TMonoestavel.trigger
-slow <= Monoestavel:TMonoestavel.q
-clk => Monoestavel:TMonoestavel.clk
-
-
-|historia4|fast_to_slow_arc:inst5|Monoestavel:TMonoestavel
-trigger => triggered.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-trigger => cont.OUTPUTSELECT
-q <= triggered.DB_MAX_OUTPUT_PORT_TYPE
-clk => triggered.CLK
-clk => cont[0].CLK
-clk => cont[1].CLK
-clk => cont[2].CLK
-clk => cont[3].CLK
-clk => cont[4].CLK
-clk => cont[5].CLK
-clk => cont[6].CLK
-clk => cont[7].CLK
-clk => cont[8].CLK
-clk => cont[9].CLK
-clk => cont[10].CLK
-clk => cont[11].CLK
-clk => cont[12].CLK
-clk => cont[13].CLK
-clk => cont[14].CLK
-clk => cont[15].CLK
-clk => cont[16].CLK
-clk => cont[17].CLK
 
 

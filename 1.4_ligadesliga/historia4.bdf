@@ -189,8 +189,8 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 640 200 776 280)
-	(text "fast_to_slow_arc" (rect 5 0 88 12)(font "Arial" ))
-	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
+	(text "fast_to_slow" (rect 5 0 67 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -220,7 +220,7 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 120 64))
 	)
-	(annotation_block (parameter)(rect 792 128 984 160))
+	(annotation_block (parameter)(rect 776 168 968 200))
 )
 (connector
 	(pt 424 192)

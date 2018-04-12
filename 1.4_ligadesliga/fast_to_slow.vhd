@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity fast_to_slow is
   generic (
-    DIVFACTOR  : natural range 0 to 50000000 := 50000000
+    DIVFACTOR  : natural range 0 to 153000 := 153000
   );
   port (
     fast  : in  std_logic;
@@ -16,7 +16,7 @@ architecture behavior of fast_to_slow is
 
   component Monoestavel is
     generic (
-      TIME_ON : in natural range 0 to 50000000 := 50000000
+      TIME_ON : in natural range 0 to 153000 := 153000
     );
 
     port (
@@ -30,7 +30,7 @@ begin
 
   TMonoestavel : Monoestavel generic map (
     TIME_ON => DIVFACTOR
-  );
+  )
 
   port map (
     trigger => fast,

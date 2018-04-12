@@ -51,7 +51,7 @@ q[8] <= lpm_counter:LPM_COUNTER_component.q[8]
 
 
 |divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component
-clock => cntr_14k:auto_generated.clock
+clock => cntr_u0k:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
@@ -72,17 +72,17 @@ data[5] => ~NO_FANOUT~
 data[6] => ~NO_FANOUT~
 data[7] => ~NO_FANOUT~
 data[8] => ~NO_FANOUT~
-cin => cntr_14k:auto_generated.cin
-q[0] <= cntr_14k:auto_generated.q[0]
-q[1] <= cntr_14k:auto_generated.q[1]
-q[2] <= cntr_14k:auto_generated.q[2]
-q[3] <= cntr_14k:auto_generated.q[3]
-q[4] <= cntr_14k:auto_generated.q[4]
-q[5] <= cntr_14k:auto_generated.q[5]
-q[6] <= cntr_14k:auto_generated.q[6]
-q[7] <= cntr_14k:auto_generated.q[7]
-q[8] <= cntr_14k:auto_generated.q[8]
-cout <= cntr_14k:auto_generated.cout
+cin => cntr_u0k:auto_generated.cin
+q[0] <= cntr_u0k:auto_generated.q[0]
+q[1] <= cntr_u0k:auto_generated.q[1]
+q[2] <= cntr_u0k:auto_generated.q[2]
+q[3] <= cntr_u0k:auto_generated.q[3]
+q[4] <= cntr_u0k:auto_generated.q[4]
+q[5] <= cntr_u0k:auto_generated.q[5]
+q[6] <= cntr_u0k:auto_generated.q[6]
+q[7] <= cntr_u0k:auto_generated.q[7]
+q[8] <= cntr_u0k:auto_generated.q[8]
+cout <= cntr_u0k:auto_generated.cout
 eq[0] <= <GND>
 eq[1] <= <GND>
 eq[2] <= <GND>
@@ -101,7 +101,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_14k:auto_generated
+|divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated
 cin => time_to_clear.IN1
 cin => counter_comb_bita0.CIN
 clock => counter_reg_bit[8].CLK
@@ -125,7 +125,7 @@ q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
 q[8] <= counter_reg_bit[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_14k:auto_generated|cmpr_pkc:cmpr1
+|divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|cmpr_pkc:cmpr1
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0
@@ -226,7 +226,7 @@ q[7] <= lpm_counter:LPM_COUNTER_component.q[7]
 
 
 |divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component
-clock => cntr_44k:auto_generated.clock
+clock => cntr_t0k:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
@@ -246,16 +246,16 @@ data[4] => ~NO_FANOUT~
 data[5] => ~NO_FANOUT~
 data[6] => ~NO_FANOUT~
 data[7] => ~NO_FANOUT~
-cin => cntr_44k:auto_generated.cin
-q[0] <= cntr_44k:auto_generated.q[0]
-q[1] <= cntr_44k:auto_generated.q[1]
-q[2] <= cntr_44k:auto_generated.q[2]
-q[3] <= cntr_44k:auto_generated.q[3]
-q[4] <= cntr_44k:auto_generated.q[4]
-q[5] <= cntr_44k:auto_generated.q[5]
-q[6] <= cntr_44k:auto_generated.q[6]
-q[7] <= cntr_44k:auto_generated.q[7]
-cout <= cntr_44k:auto_generated.cout
+cin => cntr_t0k:auto_generated.cin
+q[0] <= cntr_t0k:auto_generated.q[0]
+q[1] <= cntr_t0k:auto_generated.q[1]
+q[2] <= cntr_t0k:auto_generated.q[2]
+q[3] <= cntr_t0k:auto_generated.q[3]
+q[4] <= cntr_t0k:auto_generated.q[4]
+q[5] <= cntr_t0k:auto_generated.q[5]
+q[6] <= cntr_t0k:auto_generated.q[6]
+q[7] <= cntr_t0k:auto_generated.q[7]
+cout <= cntr_t0k:auto_generated.cout
 eq[0] <= <GND>
 eq[1] <= <GND>
 eq[2] <= <GND>
@@ -274,7 +274,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_44k:auto_generated
+|divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_t0k:auto_generated
 cin => time_to_clear.IN1
 cin => counter_comb_bita0.CIN
 clock => counter_reg_bit[7].CLK
@@ -296,7 +296,7 @@ q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_44k:auto_generated|cmpr_okc:cmpr1
+|divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component|cntr_t0k:auto_generated|cmpr_okc:cmpr1
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -332,7 +332,7 @@ q[8] <= lpm_counter:LPM_COUNTER_component.q[8]
 
 
 |divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component
-clock => cntr_64k:auto_generated.clock
+clock => cntr_u0k:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
@@ -353,17 +353,17 @@ data[5] => ~NO_FANOUT~
 data[6] => ~NO_FANOUT~
 data[7] => ~NO_FANOUT~
 data[8] => ~NO_FANOUT~
-cin => cntr_64k:auto_generated.cin
-q[0] <= cntr_64k:auto_generated.q[0]
-q[1] <= cntr_64k:auto_generated.q[1]
-q[2] <= cntr_64k:auto_generated.q[2]
-q[3] <= cntr_64k:auto_generated.q[3]
-q[4] <= cntr_64k:auto_generated.q[4]
-q[5] <= cntr_64k:auto_generated.q[5]
-q[6] <= cntr_64k:auto_generated.q[6]
-q[7] <= cntr_64k:auto_generated.q[7]
-q[8] <= cntr_64k:auto_generated.q[8]
-cout <= cntr_64k:auto_generated.cout
+cin => cntr_u0k:auto_generated.cin
+q[0] <= cntr_u0k:auto_generated.q[0]
+q[1] <= cntr_u0k:auto_generated.q[1]
+q[2] <= cntr_u0k:auto_generated.q[2]
+q[3] <= cntr_u0k:auto_generated.q[3]
+q[4] <= cntr_u0k:auto_generated.q[4]
+q[5] <= cntr_u0k:auto_generated.q[5]
+q[6] <= cntr_u0k:auto_generated.q[6]
+q[7] <= cntr_u0k:auto_generated.q[7]
+q[8] <= cntr_u0k:auto_generated.q[8]
+cout <= cntr_u0k:auto_generated.cout
 eq[0] <= <GND>
 eq[1] <= <GND>
 eq[2] <= <GND>
@@ -382,7 +382,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_64k:auto_generated
+|divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated
 cin => time_to_clear.IN1
 cin => counter_comb_bita0.CIN
 clock => counter_reg_bit[8].CLK
@@ -406,7 +406,7 @@ q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
 q[8] <= counter_reg_bit[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_64k:auto_generated|cmpr_pkc:cmpr1
+|divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|cmpr_pkc:cmpr1
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[2].IN0
 dataa[1] => data_wire[2].IN0

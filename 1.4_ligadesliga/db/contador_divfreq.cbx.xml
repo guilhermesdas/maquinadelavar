@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="contador_divfreq">
-		<CBX_INST_ENTRY INSTANCE_NAME="|contador_divfreq|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_r0k.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|contador_divfreq|lpm_counter2:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_n0k.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

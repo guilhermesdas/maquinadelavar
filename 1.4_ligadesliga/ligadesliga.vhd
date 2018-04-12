@@ -15,11 +15,6 @@ architecture logica of ligadesliga is
 	type t_est is (desligado,reset,ligado,espera);
 	-- estado inicial: desligado
 	signal est : t_est := desligado;
-	
-	-- inicializaçoes
-	--Standby := '1';
-	--off := '1';
-	--rst := '0';
 
 begin
 

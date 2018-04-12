@@ -1,5 +1,5 @@
 Fitter report for historia4
-Wed Apr 11 17:26:21 2018
+Wed Apr 11 19:11:40 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -68,17 +68,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 11 17:26:21 2018      ;
+; Fitter Status                      ; Successful - Wed Apr 11 19:11:40 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; historia4                                  ;
 ; Top-level Entity Name              ; historia4                                  ;
 ; Family                             ; Cyclone IV GX                              ;
 ; Device                             ; EP4CGX15BF14C6                             ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 54 / 14,400 ( < 1 % )                      ;
-;     Total combinational functions  ; 51 / 14,400 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 26 / 14,400 ( < 1 % )                      ;
-; Total registers                    ; 26                                         ;
+; Total logic elements               ; 10 / 14,400 ( < 1 % )                      ;
+;     Total combinational functions  ; 8 / 14,400 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 7 / 14,400 ( < 1 % )                       ;
+; Total registers                    ; 7                                          ;
 ; Total pins                         ; 6 / 81 ( 7 % )                             ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 552,960 ( 0 % )                        ;
@@ -174,19 +174,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                     ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 102 ) ; 0.00 % ( 0 / 102 )         ; 0.00 % ( 0 / 102 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 102 ) ; 0.00 % ( 0 / 102 )         ; 0.00 % ( 0 / 102 )       ;
-;                     ;                    ;                            ;                          ;
-; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+--------------------+----------------------------+--------------------------+
++-------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                    ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Placement (by node) ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 40 ) ; 0.00 % ( 0 / 40 )          ; 0.00 % ( 0 / 40 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 40 ) ; 0.00 % ( 0 / 40 )          ; 0.00 % ( 0 / 40 )        ;
+;                     ;                   ;                            ;                          ;
+; Routing (by net)    ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+-------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -204,7 +204,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 92 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 30 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -220,26 +220,26 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 54 / 14,400 ( < 1 % ) ;
-;     -- Combinational with no register       ; 28                    ;
-;     -- Register only                        ; 3                     ;
-;     -- Combinational with a register        ; 23                    ;
+; Total logic elements                        ; 10 / 14,400 ( < 1 % ) ;
+;     -- Combinational with no register       ; 3                     ;
+;     -- Register only                        ; 2                     ;
+;     -- Combinational with a register        ; 5                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 10                    ;
-;     -- 3 input functions                    ; 2                     ;
-;     -- <=2 input functions                  ; 39                    ;
-;     -- Register only                        ; 3                     ;
+;     -- 4 input functions                    ; 5                     ;
+;     -- 3 input functions                    ; 1                     ;
+;     -- <=2 input functions                  ; 2                     ;
+;     -- Register only                        ; 2                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 34                    ;
-;     -- arithmetic mode                      ; 17                    ;
+;     -- normal mode                          ; 8                     ;
+;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
-; Total registers*                            ; 26 / 14,733 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 26 / 14,400 ( < 1 % ) ;
+; Total registers*                            ; 7 / 14,733 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 7 / 14,400 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 333 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 5 / 900 ( < 1 % )     ;
+; Total LABs:  partially or completely used   ; 2 / 900 ( < 1 % )     ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 6 / 81 ( 7 % )        ;
 ;     -- Clock pins                           ; 1 / 6 ( 17 % )        ;
@@ -261,10 +261,10 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; Impedance control blocks                    ; 0 / 3 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 23                    ;
-; Highest non-global fan-out                  ; 21                    ;
-; Total fan-out                               ; 216                   ;
-; Average fan-out                             ; 2.08                  ;
+; Maximum fan-out                             ; 4                     ;
+; Highest non-global fan-out                  ; 4                     ;
+; Total fan-out                               ; 60                    ;
+; Average fan-out                             ; 1.46                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -277,26 +277,26 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 54 / 14400 ( < 1 % ) ; 0 / 14400 ( 0 % )              ;
-;     -- Combinational with no register       ; 28                   ; 0                              ;
-;     -- Register only                        ; 3                    ; 0                              ;
-;     -- Combinational with a register        ; 23                   ; 0                              ;
+; Total logic elements                        ; 10 / 14400 ( < 1 % ) ; 0 / 14400 ( 0 % )              ;
+;     -- Combinational with no register       ; 3                    ; 0                              ;
+;     -- Register only                        ; 2                    ; 0                              ;
+;     -- Combinational with a register        ; 5                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 10                   ; 0                              ;
-;     -- 3 input functions                    ; 2                    ; 0                              ;
-;     -- <=2 input functions                  ; 39                   ; 0                              ;
-;     -- Register only                        ; 3                    ; 0                              ;
+;     -- 4 input functions                    ; 5                    ; 0                              ;
+;     -- 3 input functions                    ; 1                    ; 0                              ;
+;     -- <=2 input functions                  ; 2                    ; 0                              ;
+;     -- Register only                        ; 2                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 34                   ; 0                              ;
-;     -- arithmetic mode                      ; 17                   ; 0                              ;
+;     -- normal mode                          ; 8                    ; 0                              ;
+;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 26                   ; 0                              ;
-;     -- Dedicated logic registers            ; 26 / 14400 ( < 1 % ) ; 0 / 14400 ( 0 % )              ;
+; Total registers                             ; 7                    ; 0                              ;
+;     -- Dedicated logic registers            ; 7 / 14400 ( < 1 % )  ; 0 / 14400 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 900 ( < 1 % )    ; 0 / 900 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 2 / 900 ( < 1 % )    ; 0 / 900 ( 0 % )                ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 6                    ; 0                              ;
@@ -312,8 +312,8 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 211                  ; 5                              ;
-;     -- Registered Connections               ; 66                   ; 0                              ;
+;     -- Total Connections                    ; 55                   ; 5                              ;
+;     -- Registered Connections               ; 25                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -345,8 +345,8 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
-; botao      ; K13   ; 5        ; 33           ; 15           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; clk_153khz ; J7    ; 3A       ; 16           ; 0            ; 14           ; 23                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; botao      ; N4    ; 3        ; 10           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; clk_153khz ; J7    ; 3A       ; 16           ; 0            ; 14           ; 4                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 ; clk_1khz   ; J6    ; 3A       ; 16           ; 0            ; 21           ; 3                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
@@ -356,30 +356,31 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Standby ; H12   ; 5        ; 33           ; 14           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; off     ; H10   ; 5        ; 33           ; 14           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; rst     ; J13   ; 5        ; 33           ; 15           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; Standby ; L4    ; 3        ; 8            ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; off     ; M4    ; 3        ; 8            ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; rst     ; G9    ; 6        ; 33           ; 22           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Dual Purpose and Dedicated Pins                                                                       ;
-+----------+------------------+--------------------------+------------------+---------------------------+
-; Location ; Pin Name         ; Reserved As              ; User Signal Name ; Pin Type                  ;
-+----------+------------------+--------------------------+------------------+---------------------------+
-; L3       ; MSEL2            ; -                        ; -                ; Dedicated Programming Pin ;
-; N3       ; MSEL1            ; -                        ; -                ; Dedicated Programming Pin ;
-; K5       ; MSEL0            ; -                        ; -                ; Dedicated Programming Pin ;
-; J5       ; CONF_DONE        ; -                        ; -                ; Dedicated Programming Pin ;
-; K6       ; nSTATUS          ; -                        ; -                ; Dedicated Programming Pin ;
-; N5       ; DIFFIO_B1n, NCEO ; Use as programming pin   ; ~ALTERA_NCEO~    ; Dual Purpose Pin          ;
-; A5       ; DATA0            ; As input tri-stated      ; ~ALTERA_DATA0~   ; Dual Purpose Pin          ;
-; B5       ; ASDO             ; As input tri-stated      ; ~ALTERA_ASDO~    ; Dual Purpose Pin          ;
-; C5       ; NCSO             ; As input tri-stated      ; ~ALTERA_NCSO~    ; Dual Purpose Pin          ;
-; A4       ; DCLK             ; As output driving ground ; ~ALTERA_DCLK~    ; Dual Purpose Pin          ;
-; D5       ; nCONFIG          ; -                        ; -                ; Dedicated Programming Pin ;
-; C4       ; nCE              ; -                        ; -                ; Dedicated Programming Pin ;
-+----------+------------------+--------------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Dual Purpose and Dedicated Pins                                                                            ;
++----------+-----------------------+--------------------------+------------------+---------------------------+
+; Location ; Pin Name              ; Reserved As              ; User Signal Name ; Pin Type                  ;
++----------+-----------------------+--------------------------+------------------+---------------------------+
+; L3       ; MSEL2                 ; -                        ; -                ; Dedicated Programming Pin ;
+; N3       ; MSEL1                 ; -                        ; -                ; Dedicated Programming Pin ;
+; K5       ; MSEL0                 ; -                        ; -                ; Dedicated Programming Pin ;
+; J5       ; CONF_DONE             ; -                        ; -                ; Dedicated Programming Pin ;
+; K6       ; nSTATUS               ; -                        ; -                ; Dedicated Programming Pin ;
+; N4       ; DIFFIO_B1p, CRC_ERROR ; Use as regular IO        ; botao            ; Dual Purpose Pin          ;
+; N5       ; DIFFIO_B1n, NCEO      ; Use as programming pin   ; ~ALTERA_NCEO~    ; Dual Purpose Pin          ;
+; A5       ; DATA0                 ; As input tri-stated      ; ~ALTERA_DATA0~   ; Dual Purpose Pin          ;
+; B5       ; ASDO                  ; As input tri-stated      ; ~ALTERA_ASDO~    ; Dual Purpose Pin          ;
+; C5       ; NCSO                  ; As input tri-stated      ; ~ALTERA_NCSO~    ; Dual Purpose Pin          ;
+; A4       ; DCLK                  ; As output driving ground ; ~ALTERA_DCLK~    ; Dual Purpose Pin          ;
+; D5       ; nCONFIG               ; -                        ; -                ; Dedicated Programming Pin ;
+; C4       ; nCE                   ; -                        ; -                ; Dedicated Programming Pin ;
++----------+-----------------------+--------------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------+
@@ -388,11 +389,11 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCCLKIN Voltage ;
 +----------+-----------------+---------------+--------------+------------------+
 ; QL0      ; 0 / 8 ( 0 % )   ; --            ; --           ; --               ;
-; 3        ; 1 / 8 ( 13 % )  ; 2.5V          ; --           ; --               ;
+; 3        ; 4 / 8 ( 50 % )  ; 2.5V          ; --           ; --               ;
 ; 3A       ; 2 / 2 ( 100 % ) ; --            ; --           ; 2.5V             ;
 ; 4        ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ; --               ;
-; 5        ; 4 / 12 ( 33 % ) ; 2.5V          ; --           ; --               ;
-; 6        ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; --               ;
+; 5        ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; --               ;
+; 6        ; 1 / 12 ( 8 % )  ; 2.5V          ; --           ; --               ;
 ; 7        ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ; --               ;
 ; 8A       ; 0 / 2 ( 0 % )   ; --            ; --           ; 2.5V             ;
 ; 8        ; 0 / 5 ( 0 % )   ; 2.5V          ; --           ; --               ;
@@ -491,7 +492,7 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; G6       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G7       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; G9       ; 60         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G9       ; 60         ; 6        ; rst                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G10      ; 59         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G11      ;            ; 6        ; VCCIO6                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; G12      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -505,9 +506,9 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; H7       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; H8       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H9       ;            ; --       ; VCCA                                             ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; H10      ; 52         ; 5        ; off                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H10      ; 52         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H11      ;            ; 5        ; VCCIO5                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; H12      ; 51         ; 5        ; Standby                                          ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H12      ; 51         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; H13      ; 56         ; 5        ; GND+                                             ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J1       ; 15         ; QL0      ; GXB_GND*                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; J2       ; 14         ; QL0      ; GXB_GND*                                         ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -521,7 +522,7 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; J10      ;            ;          ; VCCD_PLL                                         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J11      ;            ; 5        ; VCCIO5                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J12      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J13      ; 53         ; 5        ; rst                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J13      ; 53         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K3       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -534,11 +535,11 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; K10      ; 43         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; K11      ; 48         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K12      ; 47         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; K13      ; 54         ; 5        ; botao                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K13      ; 54         ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L1       ;            ;          ; RREF                                             ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L3       ; 16         ; 3        ; ^MSEL2                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; L4       ; 21         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; L4       ; 21         ; 3        ; Standby                                          ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; L5       ; 27         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; L6       ;            ; 3        ; VCCIO3                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L7       ; 28         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -551,7 +552,7 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; M1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M2       ;            ; --       ; VCCA_GXB                                         ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; M3       ;            ;          ; NC                                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; M4       ; 22         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M4       ; 22         ; 3        ; off                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; M5       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M6       ; 25         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; M7       ; 31         ; 4        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -564,7 +565,7 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 ; N1       ;            ; --       ; VCCL_GXB                                         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N2       ;            ;          ; NC                                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N3       ; 17         ; 3        ; ^MSEL1                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; N4       ; 23         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; N4       ; 23         ; 3        ; botao                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N5       ; 24         ; 3        ; ~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN       ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N6       ; 26         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N7       ; 32         ; 4        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -578,17 +579,15 @@ The pin-out file can be found in D:/guilherme/GitHub/maquinadelavar/1.4_ligadesl
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                    ;
-+----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                        ; Library Name ;
-+----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+--------------+
-; |historia4                       ; 54 (0)      ; 26 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 6    ; 0            ; 28 (0)       ; 3 (0)             ; 23 (0)           ; |historia4                                                 ; work         ;
-;    |debounce:inst|               ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 1 (1)            ; |historia4|debounce:inst                                   ; work         ;
-;    |fast_to_slow_arc:inst5|      ; 44 (0)      ; 19 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 25 (0)       ; 1 (0)             ; 18 (0)           ; |historia4|fast_to_slow_arc:inst5                          ; work         ;
-;       |Monoestavel:TMonoestavel| ; 44 (44)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 25 (25)      ; 1 (1)             ; 18 (18)          ; |historia4|fast_to_slow_arc:inst5|Monoestavel:TMonoestavel ; work         ;
-;    |ligadesliga:inst1|           ; 8 (8)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (5)            ; |historia4|ligadesliga:inst1                               ; work         ;
-+----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name          ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
+; |historia4                 ; 10 (0)      ; 7 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 6    ; 0            ; 3 (0)        ; 2 (0)             ; 5 (0)            ; |historia4                   ; work         ;
+;    |debounce:inst|         ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 1 (1)            ; |historia4|debounce:inst     ; work         ;
+;    |ligadesliga:inst1|     ; 8 (8)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (5)            ; |historia4|ligadesliga:inst1 ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -602,7 +601,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rst        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk_153khz ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; clk_1khz   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; botao      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; botao      ; Input    ; --            ; (6) 1313 ps   ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -614,21 +613,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_153khz               ;                   ;         ;
 ; clk_1khz                 ;                   ;         ;
 ; botao                    ;                   ;         ;
-;      - debounce:inst|OP1 ; 0                 ; 6       ;
+;      - debounce:inst|OP1 ; 1                 ; 6       ;
 +--------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                         ;
-+------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                       ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clk_153khz                                                 ; PIN_J7             ; 23      ; Clock        ; yes    ; Global Clock         ; GCLK17           ; --                        ;
-; clk_1khz                                                   ; PIN_J6             ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[17]~1 ; LCCOMB_X30_Y17_N30 ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|triggered  ; FF_X29_Y16_N31     ; 21      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; ligadesliga:inst1|Selector0~2                              ; LCCOMB_X31_Y17_N14 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                          ;
++-------------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                          ; Location         ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; clk_153khz                    ; PIN_J7           ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; clk_1khz                      ; PIN_J6           ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; ligadesliga:inst1|Selector0~2 ; LCCOMB_X9_Y1_N22 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-------------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -636,112 +633,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name       ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk_153khz ; PIN_J7   ; 23      ; 2                                    ; Global Clock         ; GCLK17           ; --                        ;
+; clk_153khz ; PIN_J7   ; 4       ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
 ; clk_1khz   ; PIN_J6   ; 3       ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 +------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+----------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                      ;
-+------------------------------------------------------------+---------+
-; Name                                                       ; Fan-Out ;
-+------------------------------------------------------------+---------+
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|triggered  ; 21      ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[17]~1 ; 18      ;
-; ligadesliga:inst1|est.reset                                ; 6       ;
-; ligadesliga:inst1|est.ligado                               ; 4       ;
-; debounce:inst|OP1                                          ; 4       ;
-; debounce:inst|OP2                                          ; 4       ;
-; ligadesliga:inst1|est.espera                               ; 3       ;
-; ligadesliga:inst1|Selector1~0                              ; 3       ;
-; debounce:inst|OP3                                          ; 3       ;
-; ligadesliga:inst1|est.desligado                            ; 3       ;
-; ligadesliga:inst1|Selector0~2                              ; 2       ;
-; ligadesliga:inst1|Standby                                  ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~34    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~32    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~30    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~28    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~26    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~24    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~22    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~20    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~18    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~16    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~14    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~12    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~10    ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~8     ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~6     ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~4     ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~2     ; 2       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~0     ; 2       ;
-; botao~input                                                ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~18    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~17    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~16    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~15    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~14    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~13    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~12    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~11    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~10    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~9     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~8     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~7     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~6     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~5     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~4     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~3     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~2     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont~0     ; 1       ;
-; ligadesliga:inst1|Selector1~2                              ; 1       ;
-; ligadesliga:inst1|Selector2~0                              ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Equal0~5   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Equal0~4   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Equal0~3   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Equal0~2   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Equal0~1   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Equal0~0   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[17]   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[0]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[1]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[2]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[3]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[4]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[5]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[6]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[7]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[8]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[9]    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[10]   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[11]   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[12]   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[13]   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[14]   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[15]   ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|cont[16]   ; 1       ;
-; ligadesliga:inst1|Selector0~1                              ; 1       ;
-; ligadesliga:inst1|Selector0~0                              ; 1       ;
-; ligadesliga:inst1|Selector1~1                              ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~33    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~31    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~29    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~27    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~25    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~23    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~21    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~19    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~17    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~15    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~13    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~11    ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~9     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~7     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~5     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~3     ; 1       ;
-; fast_to_slow_arc:inst5|Monoestavel:TMonoestavel|Add0~1     ; 1       ;
-+------------------------------------------------------------+---------+
++-------------------------------------------+
+; Non-Global High Fan-Out Signals           ;
++---------------------------------+---------+
+; Name                            ; Fan-Out ;
++---------------------------------+---------+
+; ligadesliga:inst1|est.ligado    ; 4       ;
+; debounce:inst|OP1               ; 4       ;
+; debounce:inst|OP2               ; 4       ;
+; ligadesliga:inst1|est.reset     ; 4       ;
+; ligadesliga:inst1|est.espera    ; 3       ;
+; ligadesliga:inst1|Selector1~0   ; 3       ;
+; debounce:inst|OP3               ; 3       ;
+; ligadesliga:inst1|est.desligado ; 3       ;
+; ligadesliga:inst1|Selector0~2   ; 2       ;
+; ligadesliga:inst1|Standby       ; 2       ;
+; botao~input                     ; 1       ;
+; ligadesliga:inst1|Selector1~2   ; 1       ;
+; ligadesliga:inst1|Selector2~0   ; 1       ;
+; ligadesliga:inst1|Selector0~1   ; 1       ;
+; ligadesliga:inst1|Selector0~0   ; 1       ;
+; ligadesliga:inst1|Selector1~1   ; 1       ;
++---------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -749,126 +667,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-----------------------+
 ; Routing Resource Type             ; Usage                 ;
 +-----------------------------------+-----------------------+
-; Block interconnects               ; 60 / 42,960 ( < 1 % ) ;
+; Block interconnects               ; 11 / 42,960 ( < 1 % ) ;
 ; C16 interconnects                 ; 0 / 1,518 ( 0 % )     ;
-; C4 interconnects                  ; 8 / 26,928 ( < 1 % )  ;
-; Direct links                      ; 41 / 42,960 ( < 1 % ) ;
+; C4 interconnects                  ; 2 / 26,928 ( < 1 % )  ;
+; Direct links                      ; 9 / 42,960 ( < 1 % )  ;
 ; GXB block output buffers          ; 0 / 1,200 ( 0 % )     ;
 ; Global clocks                     ; 2 / 20 ( 10 % )       ;
 ; Interquad Reference Clock Outputs ; 0 / 1 ( 0 % )         ;
 ; Interquad TXRX Clocks             ; 0 / 8 ( 0 % )         ;
 ; Interquad TXRX PCSRX outputs      ; 0 / 4 ( 0 % )         ;
 ; Interquad TXRX PCSTX outputs      ; 0 / 4 ( 0 % )         ;
-; Local interconnects               ; 37 / 14,400 ( < 1 % ) ;
+; Local interconnects               ; 10 / 14,400 ( < 1 % ) ;
 ; R24 interconnects                 ; 0 / 1,710 ( 0 % )     ;
-; R4 interconnects                  ; 13 / 37,740 ( < 1 % ) ;
+; R4 interconnects                  ; 0 / 37,740 ( 0 % )    ;
 +-----------------------------------+-----------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 10.80) ; Number of LABs  (Total = 5) ;
-+---------------------------------------------+-----------------------------+
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 2                           ;
-+---------------------------------------------+-----------------------------+
++--------------------------------------------------------------------------+
+; LAB Logic Elements                                                       ;
++--------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 5.00) ; Number of LABs  (Total = 2) ;
++--------------------------------------------+-----------------------------+
+; 1                                          ; 0                           ;
+; 2                                          ; 1                           ;
+; 3                                          ; 0                           ;
+; 4                                          ; 0                           ;
+; 5                                          ; 0                           ;
+; 6                                          ; 0                           ;
+; 7                                          ; 0                           ;
+; 8                                          ; 1                           ;
+; 9                                          ; 0                           ;
+; 10                                         ; 0                           ;
+; 11                                         ; 0                           ;
+; 12                                         ; 0                           ;
+; 13                                         ; 0                           ;
+; 14                                         ; 0                           ;
+; 15                                         ; 0                           ;
+; 16                                         ; 0                           ;
++--------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.60) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 2) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 4                           ;
-; 1 Clock enable                     ; 3                           ;
+; 1 Clock                            ; 1                           ;
 ; 2 Clocks                           ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 16.00) ; Number of LABs  (Total = 5) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 1                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 1                           ;
-; 13                                           ; 1                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 0                           ;
-; 20                                           ; 1                           ;
-; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Signals Sourced                                                       ;
++---------------------------------------------+-----------------------------+
+; Number of Signals Sourced  (Average = 8.50) ; Number of LABs  (Total = 2) ;
++---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 1                           ;
+; 5                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 1                           ;
++---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.40) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced Out  (Average = 3.00) ; Number of LABs  (Total = 2) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
-; 2                                               ; 0                           ;
+; 2                                               ; 1                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 1                           ;
-; 5                                               ; 1                           ;
-; 6                                               ; 1                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 1                           ;
-; 9                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 8.80) ; Number of LABs  (Total = 5) ;
+; Number of Distinct Inputs  (Average = 4.50) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
+; 4                                           ; 1                           ;
 ; 5                                           ; 1                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 2                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1051,7 +945,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 8A does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  2 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  5 pins available
         Info (176213): I/O bank number 9 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  0 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1059,25 +953,25 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y10 to location X33_Y20
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X10_Y9
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169177): 2 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV GX Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin clk_153khz uses I/O standard 2.5 V at J7
     Info (169178): Pin clk_1khz uses I/O standard 2.5 V at J6
 Info (144001): Generated suppressed messages file D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/output_files/historia4.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 808 megabytes
-    Info: Processing ended: Wed Apr 11 17:26:22 2018
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 820 megabytes
+    Info: Processing ended: Wed Apr 11 19:11:41 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+

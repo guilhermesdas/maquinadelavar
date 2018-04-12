@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="divfreq">
-		<CBX_INST_ENTRY INSTANCE_NAME="|divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_64k.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_44k.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|divfreq|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_u0k.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|divfreq|lpm_counter1:inst1|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_t0k.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|divfreq|lpm_counter2:inst2|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_n0k.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_14k.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|divfreq|lpm_counter3:inst3|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_u0k.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

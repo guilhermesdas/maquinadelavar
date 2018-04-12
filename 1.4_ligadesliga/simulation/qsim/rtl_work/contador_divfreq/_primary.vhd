@@ -2,9 +2,8 @@ library verilog;
 use verilog.vl_types.all;
 entity contador_divfreq is
     port(
-        clock_fpga      : in     vl_logic;
-        cin             : in     vl_logic;
-        cout            : out    vl_logic;
-        q               : out    vl_logic_vector(2 downto 0)
+        q500khz         : out    vl_logic_vector(1 downto 0);
+        clk_1khz        : in     vl_logic;
+        cin             : in     vl_logic
     );
 end contador_divfreq;
