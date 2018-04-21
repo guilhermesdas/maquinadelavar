@@ -1,5 +1,5 @@
 Analysis & Synthesis report for historia4
-Mon Apr 16 09:44:36 2018
+Sat Apr 21 17:22:30 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -16,10 +16,8 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   8. State Machine - |historia4|ligadesliga:inst1|est
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: fast_to_slow:inst2
- 12. Parameter Settings for User Entity Instance: fast_to_slow:inst2|Monoestavel:TMonoestavel
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +43,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 16 09:44:36 2018      ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 21 17:22:30 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; historia4                                  ;
 ; Top-level Entity Name              ; historia4                                  ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 54                                         ;
-;     Total combinational functions  ; 51                                         ;
-;     Dedicated logic registers      ; 26                                         ;
-; Total registers                    ; 26                                         ;
+; Total logic elements               ; 11                                         ;
+;     Total combinational functions  ; 8                                          ;
+;     Dedicated logic registers      ; 7                                          ;
+; Total registers                    ; 7                                          ;
 ; Total pins                         ; 6                                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -163,44 +161,40 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; historia4.bdf                    ; yes             ; User Block Diagram/Schematic File  ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/historia4.bdf    ;         ;
-; fast_to_slow.vhd                 ; yes             ; User VHDL File                     ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/fast_to_slow.vhd ;         ;
-; Monoestavel.vhd                  ; yes             ; User VHDL File                     ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/Monoestavel.vhd  ;         ;
-; ligadesliga.vhd                  ; yes             ; Auto-Found VHDL File               ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/ligadesliga.vhd  ;         ;
-; debounce.vhd                     ; yes             ; Auto-Found VHDL File               ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/debounce.vhd     ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; historia4.bdf                    ; yes             ; User Block Diagram/Schematic File  ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/historia4.bdf   ;         ;
+; ligadesliga.vhd                  ; yes             ; Auto-Found VHDL File               ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/ligadesliga.vhd ;         ;
+; debounce.vhd                     ; yes             ; Auto-Found VHDL File               ; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/debounce.vhd    ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 6                ;
-; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; clk_153khz~input ;
-; Maximum fan-out          ; 23               ;
-; Total fan-out            ; 206              ;
-; Average fan-out          ; 2.31             ;
-+--------------------------+------------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++--------------------------+-----------------------------+
+; Resource                 ; Usage                       ;
++--------------------------+-----------------------------+
+; I/O pins                 ; 6                           ;
+; DSP block 9-bit elements ; 0                           ;
+; Maximum fan-out node     ; ligadesliga:inst1|est.reset ;
+; Maximum fan-out          ; 5                           ;
+; Total fan-out            ; 52                          ;
+; Average fan-out          ; 1.93                        ;
++--------------------------+-----------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                              ;
-+----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------+--------------+
-; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
-+----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------+--------------+
-; |historia4                       ; 51 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 6    ; 0            ; |historia4                                             ; work         ;
-;    |debounce:inst|               ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |historia4|debounce:inst                               ; work         ;
-;    |fast_to_slow:inst2|          ; 43 (0)            ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |historia4|fast_to_slow:inst2                          ; work         ;
-;       |Monoestavel:TMonoestavel| ; 43 (43)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |historia4|fast_to_slow:inst2|Monoestavel:TMonoestavel ; work         ;
-;    |ligadesliga:inst1|           ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |historia4|ligadesliga:inst1                           ; work         ;
-+----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------+--------------+
+; |historia4                 ; 8 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 6    ; 0            ; |historia4                   ; work         ;
+;    |debounce:inst|         ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |historia4|debounce:inst     ; work         ;
+;    |ligadesliga:inst1|     ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |historia4|ligadesliga:inst1 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -222,45 +216,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 7     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |historia4|fast_to_slow:inst2|Monoestavel:TMonoestavel|cont[17] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |historia4|ligadesliga:inst1|Selector1                          ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |historia4|ligadesliga:inst1|Selector0                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fast_to_slow:inst2 ;
-+----------------+--------+---------------------------------------+
-; Parameter Name ; Value  ; Type                                  ;
-+----------------+--------+---------------------------------------+
-; divfactor      ; 153000 ; Signed Integer                        ;
-+----------------+--------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fast_to_slow:inst2|Monoestavel:TMonoestavel ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; time_on        ; 153000 ; Signed Integer                                                 ;
-+----------------+--------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |historia4|ligadesliga:inst1|Selector1 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |historia4|ligadesliga:inst1|Selector0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +-------------------------------+
@@ -278,7 +251,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Apr 16 09:44:30 2018
+    Info: Processing started: Sat Apr 21 17:22:25 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off historia4 -c historia4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file historia4.bdf
@@ -299,19 +272,17 @@ Warning (12125): Using design file debounce.vhd, which is not specified as a des
     Info (12022): Found design unit 1: debounce-Behavioral
     Info (12023): Found entity 1: debounce
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce:inst"
-Info (12128): Elaborating entity "fast_to_slow" for hierarchy "fast_to_slow:inst2"
-Info (12128): Elaborating entity "Monoestavel" for hierarchy "fast_to_slow:inst2|Monoestavel:TMonoestavel"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 54 logic cells
+    Info (21061): Implemented 11 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 569 megabytes
-    Info: Processing ended: Mon Apr 16 09:44:36 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 577 megabytes
+    Info: Processing ended: Sat Apr 21 17:22:30 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -101,7 +101,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 776 224 952 240)
+	(rect 688 224 864 240)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "rst" (rect 90 0 102 12)(font "Arial" ))
 	(pt 0 8)
@@ -187,41 +187,6 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 128 64))
 	)
 )
-(symbol
-	(rect 640 200 776 280)
-	(text "fast_to_slow" (rect 5 0 67 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "fast" (rect 0 0 20 12)(font "Arial" ))
-		(text "fast" (rect 21 27 41 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 43 35 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 136 32)
-		(output)
-		(text "slow" (rect 0 0 21 12)(font "Arial" ))
-		(text "slow" (rect 98 27 119 39)(font "Arial" ))
-		(line (pt 136 32)(pt 120 32))
-	)
-	(parameter
-		"DIVFACTOR"
-		"153000"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 120 64))
-	)
-	(annotation_block (parameter)(rect 776 168 968 200))
-)
 (connector
 	(pt 424 192)
 	(pt 440 192)
@@ -251,27 +216,10 @@ applicable agreement for further details.
 	(pt 632 232)
 )
 (connector
-	(pt 632 232)
-	(pt 640 232)
-)
-(connector
-	(pt 432 264)
-	(pt 632 264)
-)
-(connector
 	(pt 432 144)
 	(pt 432 176)
 )
 (connector
-	(pt 432 176)
-	(pt 432 264)
+	(pt 688 232)
+	(pt 632 232)
 )
-(connector
-	(pt 632 264)
-	(pt 632 248)
-)
-(connector
-	(pt 632 248)
-	(pt 640 248)
-)
-(junction (pt 432 176))
