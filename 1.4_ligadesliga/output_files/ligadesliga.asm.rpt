@@ -1,5 +1,5 @@
 Assembler report for ligadesliga
-Sun Apr 08 11:11:04 2018
+Mon Apr 16 09:47:43 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/guilherme/QuartusProjects/ligadesliga/output_files/ligadesliga.sof
+  5. Assembler Device Options: D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/output_files/ligadesliga.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Apr 08 11:11:04 2018 ;
+; Assembler Status      ; Successful - Mon Apr 16 09:47:43 2018 ;
 ; Revision Name         ; ligadesliga                           ;
 ; Top-level Entity Name ; ligadesliga                           ;
 ; Family                ; Cyclone IV GX                         ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Assembler Generated Files                                             ;
-+-----------------------------------------------------------------------+
-; File Name                                                             ;
-+-----------------------------------------------------------------------+
-; D:/guilherme/QuartusProjects/ligadesliga/output_files/ligadesliga.sof ;
-+-----------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Assembler Generated Files                                                       ;
++---------------------------------------------------------------------------------+
+; File Name                                                                       ;
++---------------------------------------------------------------------------------+
+; D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/output_files/ligadesliga.sof ;
++---------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/guilherme/QuartusProjects/ligadesliga/output_files/ligadesliga.sof ;
-+----------------+--------------------------------------------------------------------------------+
-; Option         ; Setting                                                                        ;
-+----------------+--------------------------------------------------------------------------------+
-; Device         ; EP4CGX15BF14C6                                                                 ;
-; JTAG usercode  ; 0x000BC4CF                                                                     ;
-; Checksum       ; 0x000BC4CF                                                                     ;
-+----------------+--------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/guilherme/GitHub/maquinadelavar/1.4_ligadesliga/output_files/ligadesliga.sof ;
++----------------+------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                  ;
++----------------+------------------------------------------------------------------------------------------+
+; Device         ; EP4CGX15BF14C6                                                                           ;
+; JTAG usercode  ; 0x000BC4CF                                                                               ;
+; Checksum       ; 0x000BC4CF                                                                               ;
++----------------+------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Apr 08 11:11:02 2018
+    Info: Processing started: Mon Apr 16 09:47:40 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ligadesliga -c ligadesliga
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 503 megabytes
-    Info: Processing ended: Sun Apr 08 11:11:04 2018
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Apr 16 09:47:43 2018
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

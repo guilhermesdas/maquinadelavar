@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
--- CREATED		"Wed Apr 11 22:03:40 2018"
+-- CREATED		"Sat Apr 21 17:06:00 2018"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -27,10 +27,14 @@ ENTITY divfreq IS
 		clk_fpga :  IN  STD_LOGIC;
 		cin :  IN  STD_LOGIC;
 		cout :  OUT  STD_LOGIC;
-		clk153khz :  OUT  STD_LOGIC;
+		q153khz :  OUT  STD_LOGIC_VECTOR(8 DOWNTO 0);
+		clock153khz : OUT STD_LOGIC;
 		q1hz :  OUT  STD_LOGIC_VECTOR(8 DOWNTO 0);
+		clock1hz : OUT STD_LOGIC;
 		q1khz :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		clock1khz : OUT STD_LOGIC;
 		q500hz :  OUT  STD_LOGIC_VECTOR(1 DOWNTO 0)
+		clock500hz : OUT STD_LOGIC;
 	);
 END divfreq;
 
@@ -68,7 +72,6 @@ COMPONENT lpm_counter3
 	);
 END COMPONENT;
 
-SIGNAL	q :  STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
@@ -82,29 +85,32 @@ b2v_inst : lpm_counter0
 PORT MAP(clock => clk_fpga,
 		 cin => cin,
 		 cout => SYNTHESIZED_WIRE_0,
-		 q => q);
+		 q => q153khz,
+		 q[0] => clock153khz);
 
 
 b2v_inst1 : lpm_counter1
 PORT MAP(clock => clk_fpga,
 		 cin => SYNTHESIZED_WIRE_0,
 		 cout => SYNTHESIZED_WIRE_1,
-		 q => q1khz);
+		 q => q1khz,
+		 q[0] => clock1khz);
 
 
 b2v_inst2 : lpm_counter2
 PORT MAP(clock => clk_fpga,
 		 cin => SYNTHESIZED_WIRE_1,
 		 cout => SYNTHESIZED_WIRE_2,
-		 q => q500hz);
+		 q => q500hz,
+		 q[0] => clock500hz);
 
 
 b2v_inst3 : lpm_counter3
 PORT MAP(clock => clk_fpga,
 		 cin => SYNTHESIZED_WIRE_2,
 		 cout => cout,
-		 q => q1hz);
+		 q => q1hz,
+		 q[0] => clock1hz);
 
-clk153khz <= q(0);
 
 END bdf_type;
