@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pesquisa\Desktop\COMPLETA\simulation\qsim
+vCOMPLETA
+Z1 !s100 bR9GGY2TC_aD?KkmDIRh;2
+Z2 I9g[:h>`@]e=Yj4kOK^nbG1
+Z3 V^SlW>1QcecQTTAUlL8HVA0
+Z4 dC:\Users\Pesquisa\Desktop\historia_1\COMPLETA\simulation\qsim
+Z5 w1524427167
+Z6 8COMPLETA.vo
+Z7 FCOMPLETA.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|COMPLETA.vo|
+Z10 o-work work -O0
+Z11 n@c@o@m@p@l@e@t@a
+!i10b 1
+!s85 0
+Z12 !s108 1524427169.922000
+Z13 !s107 COMPLETA.vo|
+!s101 -O0
+vCOMPLETA_vlg_check_tst
+!i10b 1
+Z14 !s100 DnJ[8Zn15RJ<IF_L8Ge?X0
+Z15 IiZ`fdbf87TZG_DOhLIJN>2
+Z16 VhG0OjTI;gQhGTaX@E8f^30
+R4
+Z17 w1524427162
+Z18 833.vwf.vt
+Z19 F33.vwf.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z20 !s108 1524427170.442000
+Z21 !s107 33.vwf.vt|
+Z22 !s90 -work|work|33.vwf.vt|
+!s101 -O0
+R10
+Z23 n@c@o@m@p@l@e@t@a_vlg_check_tst
+vCOMPLETA_vlg_sample_tst
+!i10b 1
+Z24 !s100 IYLHHP9XD2XjY:TWJK0l_0
+Z25 I9dFFL5<AD]<b^LDi3TQB^2
+Z26 V]X?9TU0^<@e]Fi<dU<0;71
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@c@o@m@p@l@e@t@a_vlg_sample_tst
+vCOMPLETA_vlg_vec_tst
+!i10b 1
+Z28 !s100 [iBDOHX4mlzhV6obWhOaK3
+Z29 I_59<A?6?XmQl_EG1eJZ<A1
+Z30 VKnJ?2`BNjkkiX35<<a8JW2
+R4
+R17
+R18
+R19
+Z31 L0 461
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@c@o@m@p@l@e@t@a_vlg_vec_tst

@@ -1,0 +1,915 @@
+Analysis & Synthesis report for COMPLETA
+Sun Apr 22 17:29:55 2018
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |COMPLETA|controladorcadeia:inst7|pr_state
+ 10. State Machine - |COMPLETA|dsf_LCD16xN:inst11|estado_ant
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: dsf_LCD16xN:inst11
+ 17. Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component
+ 18. Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component
+ 19. Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component
+ 20. Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter3:b2v_inst3|lpm_counter:LPM_COUNTER_component
+ 21. Port Connectivity Checks: "divfreq:inst6|lpm_counter3:b2v_inst3"
+ 22. Port Connectivity Checks: "divfreq:inst6|lpm_counter2:b2v_inst2"
+ 23. Port Connectivity Checks: "divfreq:inst6|lpm_counter1:b2v_inst1"
+ 24. Port Connectivity Checks: "divfreq:inst6|lpm_counter0:b2v_inst"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Apr 22 17:29:55 2018      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; COMPLETA                                   ;
+; Top-level Entity Name              ; COMPLETA                                   ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 332                                        ;
+;     Total combinational functions  ; 194                                        ;
+;     Dedicated logic registers      ; 178                                        ;
+; Total registers                    ; 178                                        ;
+; Total pins                         ; 46                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; COMPLETA           ; COMPLETA           ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; convbcdascii.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Guilherme/Desktop/COMPLETA/convbcdascii.vhd                   ;         ;
+; dsf_LCD16xN.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Guilherme/Desktop/COMPLETA/dsf_LCD16xN.vhd                    ;         ;
+; controladorcadeia.vhd            ; yes             ; User VHDL File                     ; C:/Users/Guilherme/Desktop/COMPLETA/controladorcadeia.vhd              ;         ;
+; COMPLETA.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Guilherme/Desktop/COMPLETA/COMPLETA.bdf                       ;         ;
+; divfreq.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Guilherme/Desktop/COMPLETA/divfreq.vhd                        ;         ;
+; lpm_counter0.vhd                 ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter0.vhd                   ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc          ;         ;
+; db/cntr_u0k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Guilherme/Desktop/COMPLETA/db/cntr_u0k.tdf                    ;         ;
+; db/cmpr_pkc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Guilherme/Desktop/COMPLETA/db/cmpr_pkc.tdf                    ;         ;
+; lpm_counter1.vhd                 ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter1.vhd                   ;         ;
+; db/cntr_t0k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Guilherme/Desktop/COMPLETA/db/cntr_t0k.tdf                    ;         ;
+; db/cmpr_okc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Guilherme/Desktop/COMPLETA/db/cmpr_okc.tdf                    ;         ;
+; lpm_counter2.vhd                 ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter2.vhd                   ;         ;
+; db/cntr_n0k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Guilherme/Desktop/COMPLETA/db/cntr_n0k.tdf                    ;         ;
+; db/cmpr_ikc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Guilherme/Desktop/COMPLETA/db/cmpr_ikc.tdf                    ;         ;
+; lpm_counter3.vhd                 ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter3.vhd                   ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                 ;
++--------------------------+------------------------------------------------------------------------------------------------------------------+
+; Resource                 ; Usage                                                                                                            ;
++--------------------------+------------------------------------------------------------------------------------------------------------------+
+; I/O pins                 ; 46                                                                                                               ;
+; DSP block 9-bit elements ; 0                                                                                                                ;
+; Maximum fan-out node     ; divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0] ;
+; Maximum fan-out          ; 91                                                                                                               ;
+; Total fan-out            ; 1243                                                                                                             ;
+; Average fan-out          ; 2.68                                                                                                             ;
++--------------------------+------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; |COMPLETA                                    ; 194 (1)           ; 178 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 46   ; 0            ; |COMPLETA                                                                                                ; work         ;
+;    |controladorcadeia:inst7|                 ; 60 (60)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|controladorcadeia:inst7                                                                        ; work         ;
+;    |divfreq:inst6|                           ; 30 (0)            ; 18 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6                                                                                  ; work         ;
+;       |lpm_counter0:b2v_inst|                ; 15 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter0:b2v_inst                                                            ; work         ;
+;          |lpm_counter:LPM_COUNTER_component| ; 15 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component                          ; work         ;
+;             |cntr_u0k:auto_generated|        ; 15 (15)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated  ; work         ;
+;       |lpm_counter1:b2v_inst1|               ; 14 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter1:b2v_inst1                                                           ; work         ;
+;          |lpm_counter:LPM_COUNTER_component| ; 14 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component                         ; work         ;
+;             |cntr_t0k:auto_generated|        ; 14 (14)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component|cntr_t0k:auto_generated ; work         ;
+;       |lpm_counter2:b2v_inst2|               ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter2:b2v_inst2                                                           ; work         ;
+;          |lpm_counter:LPM_COUNTER_component| ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component                         ; work         ;
+;             |cntr_n0k:auto_generated|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated ; work         ;
+;    |dsf_LCD16xN:inst11|                      ; 103 (103)         ; 130 (130)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |COMPLETA|dsf_LCD16xN:inst11                                                                             ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                 ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------+------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                ; IP Include File                                      ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------+------------------------------------------------------+
+; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |COMPLETA|divfreq:inst6|lpm_counter0:b2v_inst  ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter0.vhd ;
+; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |COMPLETA|divfreq:inst6|lpm_counter1:b2v_inst1 ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter1.vhd ;
+; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |COMPLETA|divfreq:inst6|lpm_counter2:b2v_inst2 ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter2.vhd ;
+; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |COMPLETA|divfreq:inst6|lpm_counter3:b2v_inst3 ; C:/Users/Guilherme/Desktop/COMPLETA/lpm_counter3.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------+------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |COMPLETA|controladorcadeia:inst7|pr_state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++--------------------------------+------------------------+--------------------------+------------------------+--------------------------+------------------------+--------------------------------+------------------------+---------------------+------------------------+--------------------+------------------------+--------------------------+-----------------------+--------------------------+-----------------------+--------------------------------+-----------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------------+-----------------------+--------------------------+-----------------------+------------------------------+-----------------------+--------------------+-----------------------+--------------------+
+; Name                           ; pr_state.return_inicio ; pr_state.imprime_dt_rl_1 ; pr_state.incrementa_14 ; pr_state.imprime_dt_rl_0 ; pr_state.incrementa_13 ; pr_state.imprime_dois_pontos_2 ; pr_state.incrementa_12 ; pr_state.imprime_l1 ; pr_state.incrementa_11 ; pr_state.imprime_r ; pr_state.incrementa_10 ; pr_state.imprime_dt_nl_1 ; pr_state.incrementa_9 ; pr_state.imprime_dt_nl_0 ; pr_state.incrementa_8 ; pr_state.imprime_dois_pontos_1 ; pr_state.incrementa_7 ; pr_state.imprime_l ; pr_state.incrementa_6 ; pr_state.imprime_n ; pr_state.incrementa_5 ; pr_state.imprime_dt_te_1 ; pr_state.incrementa_4 ; pr_state.imprime_dt_te_0 ; pr_state.incrementa_3 ; pr_state.imprime_dois_pontos ; pr_state.incrementa_2 ; pr_state.imprime_e ; pr_state.incrementa_1 ; pr_state.imprime_t ;
++--------------------------------+------------------------+--------------------------+------------------------+--------------------------+------------------------+--------------------------------+------------------------+---------------------+------------------------+--------------------+------------------------+--------------------------+-----------------------+--------------------------+-----------------------+--------------------------------+-----------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------------+-----------------------+--------------------------+-----------------------+------------------------------+-----------------------+--------------------+-----------------------+--------------------+
+; pr_state.imprime_t             ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 0                  ;
+; pr_state.incrementa_1          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 1                     ; 1                  ;
+; pr_state.imprime_e             ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 1                  ; 0                     ; 1                  ;
+; pr_state.incrementa_2          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 1                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dois_pontos   ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 1                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_3          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 1                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dt_te_0       ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 1                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_4          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 1                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dt_te_1       ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 1                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_5          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 1                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_n             ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 1                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_6          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 1                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_l             ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 1                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_7          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 1                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dois_pontos_1 ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 1                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_8          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 1                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dt_nl_0       ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 1                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_9          ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 1                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dt_nl_1       ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 1                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_10         ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 1                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_r             ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 1                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_11         ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 1                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_l1            ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 1                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_12         ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 1                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dois_pontos_2 ; 0                      ; 0                        ; 0                      ; 0                        ; 0                      ; 1                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_13         ; 0                      ; 0                        ; 0                      ; 0                        ; 1                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dt_rl_0       ; 0                      ; 0                        ; 0                      ; 1                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.incrementa_14         ; 0                      ; 0                        ; 1                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.imprime_dt_rl_1       ; 0                      ; 1                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
+; pr_state.return_inicio         ; 1                      ; 0                        ; 0                      ; 0                        ; 0                      ; 0                              ; 0                      ; 0                   ; 0                      ; 0                  ; 0                      ; 0                        ; 0                     ; 0                        ; 0                     ; 0                              ; 0                     ; 0                  ; 0                     ; 0                  ; 0                     ; 0                        ; 0                     ; 0                        ; 0                     ; 0                            ; 0                     ; 0                  ; 0                     ; 1                  ;
++--------------------------------+------------------------+--------------------------+------------------------+--------------------------+------------------------+--------------------------------+------------------------+---------------------+------------------------+--------------------+------------------------+--------------------------+-----------------------+--------------------------+-----------------------+--------------------------------+-----------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------------+-----------------------+--------------------------+-----------------------+------------------------------+-----------------------+--------------------+-----------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |COMPLETA|dsf_LCD16xN:inst11|estado_ant                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++----------------------------+-----------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+----------------------+---------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+; Name                       ; estado_ant.returnHome ; estado_ant.P31 ; estado_ant.P30 ; estado_ant.P29 ; estado_ant.P28 ; estado_ant.P27 ; estado_ant.P26 ; estado_ant.P25 ; estado_ant.P24 ; estado_ant.P23 ; estado_ant.P22 ; estado_ant.P21 ; estado_ant.P20 ; estado_ant.P19 ; estado_ant.P18 ; estado_ant.P17 ; estado_ant.P16 ; estado_ant.posicionaAbaixo ; estado_ant.P15 ; estado_ant.P14 ; estado_ant.P13 ; estado_ant.P12 ; estado_ant.P11 ; estado_ant.P10 ; estado_ant.P9 ; estado_ant.P8 ; estado_ant.P7 ; estado_ant.P6 ; estado_ant.P5 ; estado_ant.P4 ; estado_ant.P3 ; estado_ant.P2 ; estado_ant.P1 ; estado_ant.P0 ; estado_ant.entryMode ; estado_ant.displayControl ; estado_ant.clearDisplay ; estado_ant.functionSet4 ; estado_ant.functionSet3 ; estado_ant.functionSet2 ; estado_ant.functionSet1 ;
++----------------------------+-----------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+----------------------+---------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+; estado_ant.functionSet1    ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ;
+; estado_ant.functionSet2    ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 1                       ; 1                       ;
+; estado_ant.functionSet3    ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 1                       ; 0                       ; 1                       ;
+; estado_ant.functionSet4    ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 1                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.clearDisplay    ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 1                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.displayControl  ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 1                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.entryMode       ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P0              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P1              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P2              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P3              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P4              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P5              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P6              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P7              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P8              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P9              ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P10             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P11             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P12             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P13             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P14             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P15             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.posicionaAbaixo ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P16             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P17             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P18             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P19             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P20             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P21             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P22             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P23             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P24             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P25             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P26             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P27             ; 0                     ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P28             ; 0                     ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P29             ; 0                     ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P30             ; 0                     ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.P31             ; 0                     ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
+; estado_ant.returnHome      ; 1                     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                          ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                    ; 0                         ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
++----------------------------+-----------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+----------------------+---------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++----------------------------------------------------+----------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------+------------------------+
+; controladorcadeia:inst7|reset                      ; controladorcadeia:inst7|WideOr18 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                  ;                        ;
++----------------------------------------------------+----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                   ;
++----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
+; Register name                                                                                                        ; Reason for Removal                            ;
++----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
+; divfreq:inst6|lpm_counter3:b2v_inst3|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0..8] ; Lost fanout                                   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][7]                                                                                    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[14][7]                                                                                    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[13][7]                                                                                    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[12][7]                                                                                    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[11][7]                                                                                    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[10][7]                                                                                    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[9][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[8][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[7][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[5][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[4][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[3][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[2][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[1][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[0][7]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][0]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][1]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][2]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][3]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][4]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][7]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][0] ;
+; dsf_LCD16xN:inst11|dsf_RAM[17][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[18][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[19][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[20][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[21][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[22][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[23][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[24][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[25][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[26][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[27][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[28][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[29][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[30][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[31][5]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[16][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][0]                                                                                    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[16][5]                                                                                    ; Stuck at VCC due to stuck port data_in        ;
+; divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[1]    ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[0][3]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[0][1]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[0][0]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[2][0]                                                                                     ; Stuck at GND due to stuck port data_in        ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][6]                                                                                     ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][6]                                                                                    ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][5]                                                                                    ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][5]                                                                                     ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][4]                                                                                    ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][4]                                                                                     ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][3]                                                                                     ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][3]                                                                                    ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][2]                                                                                     ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][2]                                                                                    ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][1]                                                                                     ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][1]                                                                                    ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[6][0]                                                                                     ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[15][0]                                                                                    ; Stuck at GND due to stuck port clock_enable   ;
+; dsf_LCD16xN:inst11|dsf_RAM[0][4]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[0][2]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[0][5]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[0][2]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[0][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[0][2]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[1][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[1][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[2][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[2][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[3][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[3][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[4][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[4][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[5][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[5][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[7][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[7][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[8][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[8][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[9][6]                                                                                     ; Merged with dsf_LCD16xN:inst11|dsf_RAM[9][5]  ;
+; dsf_LCD16xN:inst11|dsf_RAM[10][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[10][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[11][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[11][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[12][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[12][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[13][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[13][5] ;
+; dsf_LCD16xN:inst11|dsf_RAM[14][6]                                                                                    ; Merged with dsf_LCD16xN:inst11|dsf_RAM[14][5] ;
+; Total Number of Removed Registers = 188                                                                              ;                                               ;
++----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 178   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 78    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 77    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; dsf_LCD16xN:inst11|dsf_RAM[14][5]       ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[13][5]       ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[12][5]       ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[11][5]       ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[10][5]       ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[9][5]        ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[8][5]        ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[7][5]        ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[5][5]        ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[4][5]        ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[3][5]        ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[2][5]        ; 1       ;
+; dsf_LCD16xN:inst11|dsf_RAM[1][5]        ; 1       ;
+; Total number of inverted registers = 13 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 34:1               ; 2 bits    ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |COMPLETA|dsf_LCD16xN:inst11|Selector2 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dsf_LCD16xN:inst11 ;
++--------------------+-------+------------------------------------+
+; Parameter Name     ; Value ; Type                               ;
++--------------------+-------+------------------------------------+
+; dsf_clk_ui_divider ; 1000  ; Signed Integer                     ;
++--------------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component ;
++------------------------+---------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                                      ;
++------------------------+---------------+---------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH              ; 9             ; Signed Integer                                                            ;
+; LPM_DIRECTION          ; UP            ; Untyped                                                                   ;
+; LPM_MODULUS            ; 2             ; Signed Integer                                                            ;
+; LPM_AVALUE             ; UNUSED        ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED        ; Untyped                                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                                        ;
+; NOT_GATE_PUSH_BACK     ; ON            ; NOT_GATE_PUSH_BACK                                                        ;
+; CARRY_CNT_EN           ; SMART         ; Untyped                                                                   ;
+; LABWIDE_SCLR           ; ON            ; Untyped                                                                   ;
+; USE_NEW_VERSION        ; TRUE          ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; cntr_u0k      ; Untyped                                                                   ;
++------------------------+---------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component ;
++------------------------+---------------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                                       ;
++------------------------+---------------+----------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                                             ;
+; LPM_WIDTH              ; 8             ; Signed Integer                                                             ;
+; LPM_DIRECTION          ; UP            ; Untyped                                                                    ;
+; LPM_MODULUS            ; 2             ; Signed Integer                                                             ;
+; LPM_AVALUE             ; UNUSED        ; Untyped                                                                    ;
+; LPM_SVALUE             ; UNUSED        ; Untyped                                                                    ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                                    ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                                    ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                                         ;
+; NOT_GATE_PUSH_BACK     ; ON            ; NOT_GATE_PUSH_BACK                                                         ;
+; CARRY_CNT_EN           ; SMART         ; Untyped                                                                    ;
+; LABWIDE_SCLR           ; ON            ; Untyped                                                                    ;
+; USE_NEW_VERSION        ; TRUE          ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; cntr_t0k      ; Untyped                                                                    ;
++------------------------+---------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component ;
++------------------------+---------------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                                       ;
++------------------------+---------------+----------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                                             ;
+; LPM_WIDTH              ; 2             ; Signed Integer                                                             ;
+; LPM_DIRECTION          ; UP            ; Untyped                                                                    ;
+; LPM_MODULUS            ; 2             ; Signed Integer                                                             ;
+; LPM_AVALUE             ; UNUSED        ; Untyped                                                                    ;
+; LPM_SVALUE             ; UNUSED        ; Untyped                                                                    ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                                    ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                                    ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                                         ;
+; NOT_GATE_PUSH_BACK     ; ON            ; NOT_GATE_PUSH_BACK                                                         ;
+; CARRY_CNT_EN           ; SMART         ; Untyped                                                                    ;
+; LABWIDE_SCLR           ; ON            ; Untyped                                                                    ;
+; USE_NEW_VERSION        ; TRUE          ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; cntr_n0k      ; Untyped                                                                    ;
++------------------------+---------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divfreq:inst6|lpm_counter3:b2v_inst3|lpm_counter:LPM_COUNTER_component ;
++------------------------+---------------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                                       ;
++------------------------+---------------+----------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                                             ;
+; LPM_WIDTH              ; 9             ; Signed Integer                                                             ;
+; LPM_DIRECTION          ; UP            ; Untyped                                                                    ;
+; LPM_MODULUS            ; 2             ; Signed Integer                                                             ;
+; LPM_AVALUE             ; UNUSED        ; Untyped                                                                    ;
+; LPM_SVALUE             ; UNUSED        ; Untyped                                                                    ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                                    ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                                    ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                                         ;
+; NOT_GATE_PUSH_BACK     ; ON            ; NOT_GATE_PUSH_BACK                                                         ;
+; CARRY_CNT_EN           ; SMART         ; Untyped                                                                    ;
+; LABWIDE_SCLR           ; ON            ; Untyped                                                                    ;
+; USE_NEW_VERSION        ; TRUE          ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; cntr_u0k      ; Untyped                                                                    ;
++------------------------+---------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divfreq:inst6|lpm_counter3:b2v_inst3"                                                  ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[8..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divfreq:inst6|lpm_counter2:b2v_inst2"                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q[1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divfreq:inst6|lpm_counter1:b2v_inst1"                                                  ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[7..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divfreq:inst6|lpm_counter0:b2v_inst"                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[8..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Apr 22 17:29:46 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off COMPLETA -c COMPLETA
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file convbcdascii.vhd
+    Info (12022): Found design unit 1: convbcdascii-behavior
+    Info (12023): Found entity 1: convbcdascii
+Info (12021): Found 2 design units, including 1 entities, in source file dsf_lcd16xn.vhd
+    Info (12022): Found design unit 1: dsf_LCD16xN-LCD_ME
+    Info (12023): Found entity 1: dsf_LCD16xN
+Info (12021): Found 2 design units, including 1 entities, in source file controladorcadeia.vhd
+    Info (12022): Found design unit 1: controladorcadeia-hardware
+    Info (12023): Found entity 1: controladorcadeia
+Info (12021): Found 1 design units, including 1 entities, in source file completa.bdf
+    Info (12023): Found entity 1: COMPLETA
+Info (12021): Found 2 design units, including 1 entities, in source file divfreq.vhd
+    Info (12022): Found design unit 1: divfreq-bdf_type
+    Info (12023): Found entity 1: divfreq
+Info (12127): Elaborating entity "COMPLETA" for the top level hierarchy
+Info (12128): Elaborating entity "dsf_LCD16xN" for hierarchy "dsf_LCD16xN:inst11"
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(45): signal "dsf_AddrY_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(46): signal "dsf_AddrX_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(47): signal "dsf_Reset_hi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(109): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(113): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(117): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(121): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(125): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(129): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(133): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(137): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(141): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(145): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(149): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(153): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(157): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(161): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(165): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(169): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(177): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(181): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(185): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(189): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(193): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(197): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(201): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(205): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(209): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(213): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(217): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(221): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(225): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(229): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(233): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dsf_LCD16xN.vhd(237): signal "dsf_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "divfreq" for hierarchy "divfreq:inst6"
+Critical Warning (10920): VHDL Incomplete Partial Association warning at divfreq.vhd(84): port or argument "q" has 8/9 unassociated elements
+Critical Warning (10920): VHDL Incomplete Partial Association warning at divfreq.vhd(91): port or argument "q" has 7/8 unassociated elements
+Critical Warning (10920): VHDL Incomplete Partial Association warning at divfreq.vhd(98): port or argument "q" has 1/2 unassociated elements
+Critical Warning (10920): VHDL Incomplete Partial Association warning at divfreq.vhd(105): port or argument "q" has 8/9 unassociated elements
+Warning (12125): Using design file lpm_counter0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lpm_counter0-SYN
+    Info (12023): Found entity 1: lpm_counter0
+Info (12128): Elaborating entity "lpm_counter0" for hierarchy "divfreq:inst6|lpm_counter0:b2v_inst"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "2"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "9"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_u0k.tdf
+    Info (12023): Found entity 1: cntr_u0k
+Info (12128): Elaborating entity "cntr_u0k" for hierarchy "divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_pkc.tdf
+    Info (12023): Found entity 1: cmpr_pkc
+Info (12128): Elaborating entity "cmpr_pkc" for hierarchy "divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|cmpr_pkc:cmpr1"
+Warning (12125): Using design file lpm_counter1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lpm_counter1-SYN
+    Info (12023): Found entity 1: lpm_counter1
+Info (12128): Elaborating entity "lpm_counter1" for hierarchy "divfreq:inst6|lpm_counter1:b2v_inst1"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "2"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_t0k.tdf
+    Info (12023): Found entity 1: cntr_t0k
+Info (12128): Elaborating entity "cntr_t0k" for hierarchy "divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component|cntr_t0k:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_okc.tdf
+    Info (12023): Found entity 1: cmpr_okc
+Info (12128): Elaborating entity "cmpr_okc" for hierarchy "divfreq:inst6|lpm_counter1:b2v_inst1|lpm_counter:LPM_COUNTER_component|cntr_t0k:auto_generated|cmpr_okc:cmpr1"
+Warning (12125): Using design file lpm_counter2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lpm_counter2-SYN
+    Info (12023): Found entity 1: lpm_counter2
+Info (12128): Elaborating entity "lpm_counter2" for hierarchy "divfreq:inst6|lpm_counter2:b2v_inst2"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "2"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_n0k.tdf
+    Info (12023): Found entity 1: cntr_n0k
+Info (12128): Elaborating entity "cntr_n0k" for hierarchy "divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ikc.tdf
+    Info (12023): Found entity 1: cmpr_ikc
+Info (12128): Elaborating entity "cmpr_ikc" for hierarchy "divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|cmpr_ikc:cmpr2"
+Warning (12125): Using design file lpm_counter3.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lpm_counter3-SYN
+    Info (12023): Found entity 1: lpm_counter3
+Info (12128): Elaborating entity "lpm_counter3" for hierarchy "divfreq:inst6|lpm_counter3:b2v_inst3"
+Info (12128): Elaborating entity "controladorcadeia" for hierarchy "controladorcadeia:inst7"
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(93): signal "dt_TE_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(100): signal "dt_TE_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(108): signal "dt_TE_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(116): signal "dt_TE_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(173): signal "dt_NL_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(181): signal "dt_NL_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(190): signal "dt_NL_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(199): signal "dt_NL_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(255): signal "dt_RL_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(263): signal "dt_RL_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(271): signal "dt_RL_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controladorcadeia.vhd(278): signal "dt_RL_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controladorcadeia.vhd(41): inferring latch(es) for signal or variable "adry", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controladorcadeia.vhd(41): inferring latch(es) for signal or variable "reset", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "reset" at controladorcadeia.vhd(41)
+Info (10041): Inferred latch for "adry" at controladorcadeia.vhd(41)
+Info (12128): Elaborating entity "convbcdascii" for hierarchy "convbcdascii:inst2"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dsf_RW_o" is stuck at GND
+    Warning (13410): Pin "dt[7]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 342 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 579 megabytes
+    Info: Processing ended: Sun Apr 22 17:29:55 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
+
+

@@ -1,0 +1,209 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.128
+TNS   : -64.019
+
+Type  : Slow 1200mV 85C Model Setup 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -3.478
+TNS   : -265.818
+
+Type  : Slow 1200mV 85C Model Setup 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : -1.431
+TNS   : -1.431
+
+Type  : Slow 1200mV 85C Model Setup 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.159
+TNS   : -12.809
+
+Type  : Slow 1200mV 85C Model Setup 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : -0.274
+TNS   : -0.982
+
+Type  : Slow 1200mV 85C Model Hold 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.871
+TNS   : -9.554
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -1.617
+TNS   : -10.475
+
+Type  : Slow 1200mV 85C Model Hold 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -0.282
+TNS   : -0.630
+
+Type  : Slow 1200mV 85C Model Hold 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : 1.261
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -0.401
+TNS   : -21.938
+
+Type  : Slow 1200mV 85C Model Removal 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -21.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -89.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : -1.000
+TNS   : -41.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -30.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.546
+TNS   : -54.836
+
+Type  : Slow 1200mV 0C Model Setup 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -3.023
+TNS   : -230.357
+
+Type  : Slow 1200mV 0C Model Setup 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : -1.146
+TNS   : -1.146
+
+Type  : Slow 1200mV 0C Model Setup 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -0.887
+TNS   : -9.100
+
+Type  : Slow 1200mV 0C Model Setup 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : -0.139
+TNS   : -0.338
+
+Type  : Slow 1200mV 0C Model Hold 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.696
+TNS   : -7.981
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -1.465
+TNS   : -9.478
+
+Type  : Slow 1200mV 0C Model Hold 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -0.204
+TNS   : -0.387
+
+Type  : Slow 1200mV 0C Model Hold 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : 1.104
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -0.287
+TNS   : -13.946
+
+Type  : Slow 1200mV 0C Model Removal 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : 0.658
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -21.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -89.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : -1.000
+TNS   : -41.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -30.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.869
+TNS   : -28.262
+
+Type  : Fast 1200mV 0C Model Setup 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.534
+TNS   : -111.784
+
+Type  : Fast 1200mV 0C Model Setup 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : -0.479
+TNS   : -0.479
+
+Type  : Fast 1200mV 0C Model Setup 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -0.264
+TNS   : -1.734
+
+Type  : Fast 1200mV 0C Model Setup 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.119
+TNS   : -9.623
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.986
+TNS   : -6.602
+
+Type  : Fast 1200mV 0C Model Hold 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -0.231
+TNS   : -0.832
+
+Type  : Fast 1200mV 0C Model Hold 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : 0.814
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : 0.268
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -21.478
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divfreq:inst6|lpm_counter0:b2v_inst|lpm_counter:LPM_COUNTER_component|cntr_u0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -89.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dsf_LCD16xN:inst11|dsf_e_LCD_b'
+Slack : -1.000
+TNS   : -41.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divfreq:inst6|lpm_counter2:b2v_inst2|lpm_counter:LPM_COUNTER_component|cntr_n0k:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -30.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controladorcadeia:inst7|pr_state.incrementa_1'
+Slack : 0.387
+TNS   : 0.000
+
+------------------------------------------------------------
