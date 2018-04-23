@@ -1,0 +1,6 @@
+|logica
+enTE => process_0.IN0
+endTE => process_0.IN1
+cntEN <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+

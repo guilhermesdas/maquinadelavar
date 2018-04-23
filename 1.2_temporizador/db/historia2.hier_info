@@ -6,8 +6,7 @@ wrTE => lpm_counter0:inst2.sload
 wrTE => lpm_counter0:inst.sload
 clk_1hz => lpm_counter0:inst2.clock
 clk_1hz => lpm_counter0:inst.clock
-enTE => lpm_counter0:inst2.cnt_en
-enTE => lpm_counter0:inst.cnt_en
+enTE => logica:inst1.enTE
 cin => lpm_counter0:inst.cin
 dtRL1[0] => lpm_counter0:inst.data[0]
 dtRL1[1] => lpm_counter0:inst.data[1]
@@ -112,6 +111,12 @@ sload => _.IN0
 sload => _.IN0
 sload => _.IN1
 sload => _.IN1
+
+
+|historia2|logica:inst1
+enTE => process_0.IN0
+endTE => process_0.IN1
+cntEN <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |historia2|lpm_counter0:inst
